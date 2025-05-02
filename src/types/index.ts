@@ -1,0 +1,19 @@
+import { StaticImageData } from "next/image";
+
+export type Projectprops = {
+  name: string;
+  techstack: string[];
+  short_desc: string;
+  description: {
+    header: string;
+    description: string | string[];
+    image?: StaticImageData;
+  }[];
+  link: {
+    name: string;
+    link: string;
+    icon: StaticImageData;
+  }[];
+  slug: string;
+  image: StaticImageData;
+};
