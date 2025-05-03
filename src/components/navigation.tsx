@@ -21,7 +21,7 @@ const Navigation = () => {
               <Link
                 key={index}
                 href={link}
-                className="border border-jt-lightblue text-jt-lightblue px-4 py-1 rounded-full text-sm font-medium hover:bg-jt-lightblue hover:text-black transition-colors duration-200"
+                className="border border-jt-lightblue text-jt-lightblue px-4 py-1 rounded-full text-sm font-medium hover:bg-jt-lightblue hover:text-white transition-colors duration-200"
               >
                 {name}
               </Link>

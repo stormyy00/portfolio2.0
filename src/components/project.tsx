@@ -7,6 +7,8 @@ const Project = ({ name, description, techstack, link }: Projectprops) => {
   return (
     <div className="relative flex flex-col justify-center items-center">
       {/* <Link href={"/projects"} className="text-3xl bg-jt-lightblue text-white font-semibold p-1 rounded-xl">Return to Projects</Link> */}
+      <div className="bg-gradient-to-r from-[#3CCDE3]/40 to-[#0B00A4]/40 blur-3xl w-1/2 h-3/5 absolute top-[10%] -left-[10%] -z-10" />
+      <div className="bg-gradient-to-r from-[#3CCDE3]/40 to-[#0B00A4]/40 blur-3xl w-1/3 h-3/5 absolute -bottom-[5%] -right-[10%] -z-10" />
       <div className="relative w-full h-80">
         <Image
           src={CitrusHack}
@@ -16,7 +18,7 @@ const Project = ({ name, description, techstack, link }: Projectprops) => {
         />
         <div className="absolute inset-0 bg-black/20 z-10" />
       </div>
-      <div className="w-2/3 space-y-6 mt-5">
+      <div className="w-11/12 md:w-2/3 space-y-6 mt-5">
         <div className="flex flex-col items-start justify-center">
           <div className="text-jt-lightblue font-semibold">
             Oct 2024 - Mar 2025

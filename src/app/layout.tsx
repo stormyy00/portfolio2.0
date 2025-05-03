@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable}  antialiased bg-jt-gray`}
+        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable}  antialiased bg-black`}
       >
         <Navigation />
         {children}

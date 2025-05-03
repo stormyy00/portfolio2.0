@@ -9,9 +9,12 @@ const Footer = () => {
           <p className="text-sm">
             Software Engineer <br /> Photographer
           </p>
+          <div className="flex flex-col space-y-2 text-sm">
+            <Link href="">Linkedin</Link>
+            <Link href="">Github</Link>
+            <Link href="">Email</Link>
+          </div>
         </div>
-
-        {/* Quick Links */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
           <div className="flex flex-col space-y-2 text-sm">
@@ -32,7 +35,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Resources */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Resources</h3>
           <div className="flex flex-col space-y-2 text-sm">
@@ -46,14 +48,6 @@ const Footer = () => {
             <Link href="/privacy-policy" className="hover:text-white">
               Photography
             </Link>
-          </div>
-        </div>
-        <div className="">
-          <h3 className="text-lg font-semibold mb-4">Contact</h3>
-          <div className="flex flex-col space-y-2 text-sm">
-            <Link href="">Linkedin</Link>
-            <Link href="">Github</Link>
-            <Link href="">Email</Link>
           </div>
         </div>
       </div>
