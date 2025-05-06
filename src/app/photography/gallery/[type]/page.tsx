@@ -1,7 +1,11 @@
 import React from "react";
 
-const page = () => {
-  return <div>page</div>;
+export async function generateStaticParams() {
+  return [{ type: "portraits" }, { type: "events" }, { type: "products" }];
+}
+
+const Page = ({ params }: { params: { type: string } }) => {
+  return <div>{params.type}</div>;
 };
 
-export default page;
+export default Page;
