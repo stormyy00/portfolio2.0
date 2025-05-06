@@ -1,17 +1,13 @@
 export async function generateStaticParams() {
-  return [
-    { type: 'tech' },
-    { type: 'life' },
-    { type: 'travel' },
-    // Add all expected types here
-  ];
+  return [{ type: "tech" }, { type: "life" }, { type: "travel" }];
 }
 
-export default function BlogTypePage({ params }: { params: { type: string } }) {
+const Page = ({ params }: { params: { type: string } }) => {
   return (
     <div>
       <h1>Blog Category: {params.type}</h1>
-      {/* Render your content */}
     </div>
   );
-}
+};
+
+export default Page;
