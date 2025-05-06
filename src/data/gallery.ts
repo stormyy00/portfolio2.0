@@ -1,27 +1,27 @@
 import bigbear from "../../public/landing.jpg";
 export const GALLERY = [
   {
-    name: "Big Bear",
+    name: "My Vision",
     image: bigbear,
-    link: "big-bear",
+    link: "me",
     type: "landscape",
   },
   {
-    name: "Big Bear",
+    name: "Graduation",
     image: bigbear,
-    link: "big-bear",
+    link: "graduation",
     type: "portrait",
   },
   {
-    name: "Big Bear",
+    name: "Portraits",
     image: bigbear,
-    link: "big-bear",
-    type: "landscape",
+    link: "Portraits",
+    type: "portrait",
   },
   {
-    name: "Big Bear",
+    name: "Landscapes",
     image: bigbear,
-    link: "big-bear",
+    link: "landscapes",
     type: "landscape",
   },
   {

@@ -17,3 +17,10 @@ export type Projectprops = {
   slug: string;
   image: StaticImageData;
 };
+
+export type experienceProps = {
+  title: string;
+  company: string;
+  description: string[];
+  date: string;
+};

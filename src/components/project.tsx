@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Project = ({ name, description, techstack, link }: Projectprops) => {
   return (
-    <div className="relative flex flex-col justify-center items-center">
+    <div className="relative flex flex-col justify-center items-center text-white">
       {/* <Link href={"/projects"} className="text-3xl bg-jt-lightblue text-white font-semibold p-1 rounded-xl">Return to Projects</Link> */}
       <div className="bg-gradient-to-r from-[#3CCDE3]/40 to-[#0B00A4]/40 blur-3xl w-1/2 h-3/5 absolute top-[10%] -left-[10%] -z-10" />
       <div className="bg-gradient-to-r from-[#3CCDE3]/40 to-[#0B00A4]/40 blur-3xl w-1/3 h-3/5 absolute -bottom-[5%] -right-[10%] -z-10" />

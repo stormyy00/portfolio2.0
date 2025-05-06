@@ -1,58 +1,70 @@
 import React from "react";
 import Link from "next/link";
-const Footer = () => {
+import { GithubIcon, Linkedin, Mail } from "lucide-react";
+
+export default function Footer() {
+  const quickLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/projects", label: "Projects" },
+    { href: "/experience", label: "Experience" },
+  ];
+
+  const resources = [
+    { href: "/blog", label: "Blog" },
+    { href: "/faqs", label: "FAQs" },
+    { href: "/photography", label: "Photography" },
+  ];
+
   return (
-    <div className=" text-gray-300 px-6 py-10">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div className=" text-gray-300 py-10">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h2 className="text-xl font-bold mb-4">Jonathan Trujillo</h2>
-          <p className="text-sm">
-            Software Engineer <br /> Photographer
-          </p>
-          <div className="flex flex-col space-y-2 text-sm">
-            <Link href="">Linkedin</Link>
-            <Link href="">Github</Link>
-            <Link href="">Email</Link>
-          </div>
-        </div>
-        <div>
-          <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-          <div className="flex flex-col space-y-2 text-sm">
-            <Link href="/" className="hover:text-white">
-              Home
+          <h2 className="text-2xl font-bold mb-2">Jonathan Trujillo</h2>
+          <p className="text-sm mb-4">Software Engineer & Photographer</p>
+          <div className="flex space-x-4">
+            <Link href="" aria-label="LinkedIn">
+              <Linkedin size={24} className="hover:text-white" />
             </Link>
-
-            <Link href="/about" className="hover:text-white">
-              About Us
+            <Link href="" aria-label="GitHub">
+              <GithubIcon size={24} className="hover:text-white" />
             </Link>
-            <Link href="/services" className="hover:text-white">
-              Projects
-            </Link>
-
-            <Link href="/contact" className="hover:text-white">
-              Experience
+            <Link href="" aria-label="Email">
+              <Mail size={24} className="hover:text-white" />
             </Link>
           </div>
         </div>
 
-        <div>
-          <h3 className="text-lg font-semibold mb-4">Resources</h3>
-          <div className="flex flex-col space-y-2 text-sm">
-            <Link href="/blog" className="hover:text-white">
-              Blog
-            </Link>
-            <Link href="/faqs" className="hover:text-white">
-              FAQs
-            </Link>
+        <nav>
+          <h3 className="text-xl font-semibold mb-3">Quick Links</h3>
+          <ul className="space-y-1 text-sm">
+            {quickLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:text-white">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-            <Link href="/privacy-policy" className="hover:text-white">
-              Photography
-            </Link>
-          </div>
-        </div>
+        <nav>
+          <h3 className="text-xl font-semibold mb-3">Resources</h3>
+          <ul className="space-y-1 text-sm">
+            {resources.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:text-white">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+      <div className="mt-8 text-center text-xs text-gray-500">
+        &copy; {new Date().getFullYear()} Jonathan Trujillo. All rights
+        reserved.
       </div>
     </div>
   );
-};
-
-export default Footer;
+}
