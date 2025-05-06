@@ -14,9 +14,9 @@ const config: Config = {
           gray: "#202323",
           lightblue: "#3CCDE3",
         },
-        fontFamily: {
-          poppins: ["var(--font-poppins)"],
-        },
+        // fontFamily: {
+        //   poppins: ["var(--font-poppins)"],
+        // },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
