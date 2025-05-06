@@ -1,7 +1,13 @@
-import React from "react";
+export async function generateStaticParams() {
+  return [{ type: "tech" }, { type: "life" }, { type: "travel" }];
+}
 
-const page = () => {
-  return <div></div>;
+const Page = ({ params }: { params: { type: string } }) => {
+  return (
+    <div>
+      <h1>Blog Category: {params.type}</h1>
+    </div>
+  );
 };
 
-export default page;
+export default Page;
