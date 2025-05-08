@@ -3,11 +3,14 @@ import React from "react";
 
 const About = () => {
   return (
-    <div id="about" className="bg-white text-black w-full my-10">
+    <div
+      id="about"
+      className="flex flex-col items-center bg-white text-black w-full my-10"
+    >
       <div className="text-7xl font-bold w-full overflow-hidden whitespace-nowrap">
         {"about.".repeat(40)}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-6 w-5/6">
         <div className="space-y-8">
           <div className=" pb-4">
             <h2 className="text-2xl font-semibold mb-2 border-b border-black">
@@ -62,17 +65,6 @@ const About = () => {
               </Link>
             </div>
           </div>
-        </div>
-
-        <div className=" pb-4">
-          <h2 className="text-2xl font-semibold mb-2 border-b border-black">
-            Experiences
-          </h2>
-          <p>
-            Worked on multiple web development projects, contributed to
-            open-source, and built personal apps combining photography with
-            modern web tech.
-          </p>
         </div>
       </div>
     </div>

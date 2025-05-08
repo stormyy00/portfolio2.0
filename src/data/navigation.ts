@@ -1,3 +1,5 @@
+import { BriefcaseBusiness, ComputerIcon, User } from "lucide-react";
+
 export const NAVIGATION = {
   main: [
     {
@@ -18,16 +20,22 @@ export const NAVIGATION = {
   ],
   sub: [
     {
-      name: "about",
+      name: "About",
       link: "#about",
+      pathname: "about",
+      icon: User,
     },
     {
-      name: "experience",
+      name: "Experience",
       link: "#experience",
+      pathname: "experience",
+      icon: BriefcaseBusiness,
     },
     {
-      name: "projects",
+      name: "Projects",
       link: "#projects",
+      pathname: "projects",
+      icon: ComputerIcon,
     },
   ],
 };

@@ -7,7 +7,7 @@ export const EXPERIENCE: experienceProps[] = [
     title: "Software Engineer Intern",
     company: "EFG (Engineering for Good)",
     description: [
-      "Co-developed Ttickle, an AI-powered marketing platform for BlueHearts that auto-generates newsletters, social posts, & email campaigns using Gemini 2.5 Flash",
+      "Co-developed Ttickle, an AI-powered marketing platform for BlueHearts that generates content for social amplification using Gemini 2.5 Flash",
       "Dockerized & deployed on Google Cloud Run, scaling to 1,000+ monthly uses at under $3 month operating cost.",
       "Reduced nonprofit marketing workload by 30%, freeing small teams to focus on community outreach",
       "Designed a low-cost microservices architecture, balancing LLM performance & serverless scaling.",
