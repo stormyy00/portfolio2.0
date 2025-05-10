@@ -1,5 +1,7 @@
+import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import Skills from "./skils";
 
 const About = () => {
   return (
@@ -17,10 +19,11 @@ const About = () => {
               Introduction
             </h2>
             <p>
-              I am a software engineer with a passion for photography. I have a
-              strong background in web development and a keen eye for design. I
-              enjoy creating beautiful and functional websites that provide a
-              great user experience.
+              I am a software engineer with a passion for photography. I{"'"}m
+              obsessed with building projects that help benefits prople
+              productiity.
+              <br />I enjoy doing photography and also DJ on the side, as well
+              as
             </p>
           </div>
 
@@ -29,10 +32,8 @@ const About = () => {
               Education
             </h2>
             <p>
-              I graduated from the University of California, Berkeley with a
-              degree in Computer Science. During my time at UC Berkeley, I was
-              involved in various projects and organizations that helped me
-              develop my skills and gain valuable experience.
+              Currently attending from the University of California, Riverside
+              Bachelors Computer Science.
             </p>
           </div>
 
@@ -46,26 +47,25 @@ const About = () => {
                 target="_blank"
                 className="text-blue-500 hover:underline"
               >
-                LinkedIn
+                <Linkedin size={24} />
               </Link>
-              <br />
               <Link
                 href="https://github.com/jonathantrujillo"
                 target="_blank"
                 className="text-blue-500 hover:underline"
               >
-                GitHub
+                <Github size={24} />
               </Link>
-              <br />
               <Link
                 href="mailto:youremail@example.com"
                 className="text-blue-500 hover:underline"
               >
-                Email
+                <Mail size={24} />
               </Link>
             </div>
           </div>
         </div>
+        <Skills />
       </div>
     </div>
   );
