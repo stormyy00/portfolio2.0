@@ -14,12 +14,13 @@ const Projects = ({ data }: { data: Projectprops[] }) => {
       <div className="text-white text-5xl font-medium mx-4">PROJECTS</div>
       <div className="flex justify-center">
         <div className="flex flex-col md:flex-row md:w-full justify-between flex-wrap mt-[5%]">
-          {data.map(({ name, short_desc, slug, image }, index) => (
+          {data.map(({ name, short_desc, slug, image, link }, index) => (
             <Card
               key={index}
               name={name}
               description={short_desc}
-              link={slug}
+              slug={slug}
+              link={link}
               image={image}
             />
           ))}
