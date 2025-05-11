@@ -4,35 +4,37 @@ import Link from "next/link";
 
 const Landing = () => {
   return (
-    <div className="flex min-h-96 w-full justify-center text-white md:h-screen">
-      <div className="absolute h-96 w-full md:h-full">
+    <div className="flex relative h-[90vh] w-full justify-center text-white">
+      <div className="absolute inset-0">
         <Image
-          className="h-full object-cover"
           src={backgorund}
           alt="UCR Background"
           fill
+          className="object-cover"
+          priority
         />
       </div>
-      <div className="absolute min-h-80 w-full bg-gradient-to-r from-[#00000081] to-[#080909] opacity-[75%] md:h-full" />
-      <div className="absolute bottom-0 left-0 w-full flex items-end justify-between p-6">
-        <div className="z-10 flex flex-col h-full border-l-4 pl-4 border-white">
-          <p className="text-[30px] sm:text-[40px] md:text-[50px] lg:text-[70px] xl:text-[80px]">
+      <div className="absolute min-h-72 w-full bg-gradient-to-r from-[#00000081] to-[#080909] opacity-[75%] md:h-full" />
+      <div className="absolute bottom-0 left-0 z-10 w-full flex flex-col md:flex-row items-start md:items-end justify-between p-6 md:p-12 gap-6">
+        {/* Text Block */}
+        <div className="flex flex-col border-l-4 border-white pl-4">
+          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold">
             Jonathan Trujillo
           </p>
-          <p className="text-base md:text-xl lg:text-2xl xl:text-3xl">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl">
             Photographer
           </p>
         </div>
-        <div className="flex gap-2 h-fit">
+        <div className="flex gap-3">
           <Link
             href="/photography"
-            className="mt-4 flex items-center justify-center rounded-full border border-white bg-transparent px-4 py-2 text-sm font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-black"
+            className="px-4 py-2 rounded-full border border-white text-sm font-medium transition hover:bg-white hover:text-black"
           >
             About
           </Link>
           <Link
-            href="photography/gallery"
-            className="mt-4 flex items-center justify-center rounded-full border border-white bg-transparent px-4 py-2 text-sm font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-black"
+            href="/photography/gallery"
+            className="px-4 py-2 rounded-full border border-white text-sm font-medium transition hover:bg-white hover:text-black"
           >
             Gallery
           </Link>

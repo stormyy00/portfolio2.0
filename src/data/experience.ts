@@ -39,7 +39,7 @@ export const EXPERIENCE: experienceProps[] = [
   },
   {
     title: "Project Manager & Software Engineer",
-    company: "ACM@UCR",
+    company: "ACM UCR",
     description: [
       "Surveys basic concepts and techniques underpinning modern AI including problem solving, automated reasoning, game AI, vision and language, neural networks, and robotics. Explores history, ethics, use cases, and applications. Introduces basic use of Python for building and using AI but expects no prior experience. Intended for non-engineering majors",
     ],

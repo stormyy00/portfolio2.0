@@ -81,6 +81,10 @@ export const SKILLS = {
       icon: SiTailwindcss,
     },
     {
+      name: "Google Cloud Plaform",
+      icon: SiGoogle,
+    },
+    {
       name: "Flask",
       icon: SiFlask,
     },
@@ -108,10 +112,11 @@ export const SKILLS = {
       name: "Postman",
       icon: SiPostman,
     },
+    { name: "Figma", icon: SiFigma },
   ],
-  Design: [{ name: "Figma", icon: SiFigma }],
-  Credentials: [
-    { name: "Google Cloud Foundations ", icon: SiGoogle },
-    { name: "Oracle Vector Search", icon: SiGoogle },
-  ],
+  // Design: [{ name: "Figma", icon: SiFigma }],
+  // Credentials: [
+  //   { name: "Google Cloud Foundations ", icon: SiGoogle },
+  //   { name: "Oracle Vector Search", icon: SiGoogle },
+  // ],
 };
