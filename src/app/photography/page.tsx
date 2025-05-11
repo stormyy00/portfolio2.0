@@ -1,4 +1,5 @@
 import About from "@/components/photograohy/about";
+import Gallery from "@/components/photograohy/gallery";
 import Landing from "@/components/photograohy/landing";
 import React from "react";
 
@@ -7,6 +8,7 @@ const page = () => {
     <div>
       <Landing />
       <About />
+      <Gallery />
     </div>
   );
 };

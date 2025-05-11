@@ -1,30 +1,98 @@
-import React from "react";
+"use client";
+
+import { useState, useEffect } from "react";
 import { GALLERY } from "@/data/gallery";
 import Image from "next/image";
 import Link from "next/link";
 
 const Gallery = () => {
-  return (
-    <div className="w-full px-6 py-12">
-      <div className="max-w-7xl mx-auto text-center">
-        <h1 className="text-4xl font-bold text-white mb-4 tracking-tight">
-          My Photography Portfolio
-        </h1>
-        <p className="text-gray-500 text-lg mb-10 max-w-2xl mx-auto">
-          A curated collection of moments I{"'"}ve captured. Whether it{"'"}s
-          portraits, events, or candid shots—each frame tells a story. Reach out
-          if you{"'"}d like your story told through my lens.
-        </p>
+  const [category, setCategory] = useState("all");
+  const [selectedName, setSelectedName] = useState("All");
 
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-          {GALLERY.map(({ name, image, link }, index) => (
-            <Link
+  const isAllCategory = category === "landscape" || category === "portrait";
+
+  useEffect(() => {
+    setSelectedName("All");
+  }, [category]);
+
+  const types = ["landscape", "portrait"];
+
+  return (
+    <div className="flex flex-col md:flex-row w-full px-6 py-12 gap-8">
+      <div className="md:w-1/4 w-full flex flex-col gap-4 text-white">
+        <div className="flex flex-wrap gap-2">
+          <button
+            onClick={() => setCategory("all")}
+            className={`px-4 py-2 rounded-md border ${
+              category === "all"
+                ? "bg-white text-black"
+                : "bg-black border-white"
+            }`}
+          >
+            All
+          </button>
+          {types.map((type, index) => (
+            <button
               key={index}
-              href={`photography/gallery/${link}`}
+              onClick={() => setCategory(type)}
+              className={`px-4 py-2 rounded-md border ${
+                category === type
+                  ? "bg-white text-black"
+                  : "bg-black border-white"
+              }`}
+            >
+              {type.charAt(0).toUpperCase() + type.slice(1)}
+            </button>
+          ))}
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <button
+            onClick={() => setSelectedName("All")}
+            className={`text-center rounded-md border hover:bg-white/70 duration-300 ${
+              selectedName === "All"
+                ? "bg-white text-black"
+                : "bg-black border-white"
+            }`}
+          >
+            All
+          </button>
+          {(isAllCategory
+            ? GALLERY.filter(({ type }) => type === category)
+            : GALLERY
+          )
+            .map(({ name }) => name)
+            .filter((value, index, self) => self.indexOf(value) === index)
+            .map((name, index) => (
+              <button
+                key={index}
+                onClick={() => setSelectedName(name)}
+                className={`text-center rounded-md border hover:bg-white/70 duration-300 ${
+                  selectedName === name
+                    ? "bg-white text-black"
+                    : "bg-black border-white"
+                }`}
+              >
+                {name}
+              </button>
+            ))}
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+        {GALLERY.filter(
+          ({ type, name }) =>
+            (category === "all" || type === category) &&
+            (selectedName === "All" || name === selectedName),
+        ).map(({ name, image, link }, index) =>
+          image.map((img, imgIdx) => (
+            <Link
+              key={`${index}-${imgIdx}`}
+              href={`/photography/gallery/${link}`}
               className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
             >
               <Image
-                src={image}
+                src={img}
                 alt={name}
                 className="object-cover w-full h-72 group-hover:scale-105 transition-transform duration-300"
               />
@@ -32,8 +100,8 @@ const Gallery = () => {
                 <h2 className="text-white text-xl font-semibold">{name}</h2>
               </div>
             </Link>
-          ))}
-        </div>
+          )),
+        )}
       </div>
     </div>
   );
