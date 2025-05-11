@@ -7,7 +7,7 @@ import { PROJECTS } from "@/data/projects";
 
 const page = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-0">
+    <div className="flex flex-col items-center justify-center w-full min-h-screen p-0">
       <Sidebar />
       <Home />
       <About />
