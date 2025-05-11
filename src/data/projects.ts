@@ -1,5 +1,11 @@
 import { Projectprops } from "@/types";
 import CitrusHack from "../../public/citrushack.png";
+import cutiehack from "../../public/projects/cutiehack.png";
+import rosehack from "../../public/projects/rosehack.png";
+import autoauto from "../../public/projects/auto-auto.png";
+import cs166 from "../../public/projects/cs166.png";
+import cs178 from "../../public/projects/cs178.png";
+import learnai from "../../public/projects/learnai.png";
 import Figma from "../../public/icons/figma.svg";
 import Github from "../../public/icons/github.svg";
 import link from "../../public/icons/link.svg";
@@ -81,7 +87,7 @@ export const PROJECTS: Projectprops[] = [
       },
     ],
     slug: "ttickle-platform",
-    image: CitrusHack,
+    image: cs178,
   },
   {
     name: "Aurora",
@@ -159,7 +165,7 @@ export const PROJECTS: Projectprops[] = [
       },
     ],
     slug: "ucr-cse-ai-hub",
-    image: CitrusHack,
+    image: learnai,
   },
   {
     name: "Auto Auto",
@@ -198,7 +204,7 @@ export const PROJECTS: Projectprops[] = [
       },
     ],
     slug: "auto-auto",
-    image: CitrusHack,
+    image: autoauto,
   },
   {
     name: "Hackathon.js",
@@ -279,7 +285,7 @@ export const PROJECTS: Projectprops[] = [
     image: CitrusHack,
   },
   {
-    name: "Auto Auto",
+    name: "CutieHack",
     short_desc: "cool",
     description: [
       {
@@ -315,7 +321,7 @@ export const PROJECTS: Projectprops[] = [
       },
     ],
     slug: "auto-auto",
-    image: CitrusHack,
+    image: cutiehack,
   },
   {
     name: "Game Rental System",
@@ -354,7 +360,7 @@ export const PROJECTS: Projectprops[] = [
       },
     ],
     slug: "game-rental-system",
-    image: CitrusHack,
+    image: cs166,
   },
   {
     name: "CitrusHack 2025",
@@ -432,7 +438,7 @@ export const PROJECTS: Projectprops[] = [
       },
     ],
     slug: "rosehack-2025",
-    image: CitrusHack,
+    image: rosehack,
   },
 ];
 

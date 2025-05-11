@@ -13,34 +13,48 @@ const About = () => {
         {"about.".repeat(40)}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-6 w-5/6">
-        <div className="space-y-8">
+        <div className="space-y-8 flex flex-col justify-center">
           <div className=" pb-4">
             <h2 className="text-2xl font-semibold mb-2 border-b border-black">
-              Introduction
+              About me
             </h2>
             <p>
-              I am a software engineer with a passion for photography. I{"'"}m
-              obsessed with building projects that help benefits prople
-              productiity.
-              <br />I enjoy doing photography and also DJ on the side, as well
-              as
+              I am currently software engineer at{" "}
+              <span className="text-jt-lightblue font-semibold"> EFG</span>,
+              working in creating a protype to help generate marketing content
+              for social amplification. I am currently finishing my{" "}
+              <span className="font-semibold">Bachelors of Science</span> in
+              <span className="font-semibold"> Computer Science</span> at the{" "}
+              <span className="text-jt-lightblue font-semibold">
+                University of California, Riverside{" "}
+              </span>
+            </p>
+
+            <p className="mt-4">
+              {" "}
+              Some technologies i{"'"}ve been working with on the right:
+            </p>
+
+            <p className="mt-4">
+              Outside of Computer Science, I am working as freelance
+              Photographer.
             </p>
           </div>
-
-          <div className=" pb-4">
-            <h2 className="text-2xl font-semibold mb-2 border-b border-black">
-              Education
-            </h2>
-            <p>
-              Currently attending from the University of California, Riverside
-              Bachelors Computer Science.
-            </p>
+          <div>
+            <div className="text-2xl font-semibold border-b-2 border-black">
+              Credentials{" "}
+            </div>
+            <div className="w-fit mt-2">
+              <div className="flex items-center gap-2 text-black bg-jt-dark p-2 rounded-md shadow">
+                <span>Google Cloud Foundations</span>
+              </div>
+              <div className="flex items-center gap-2 text-black bg-jt-dark p-2 rounded-md shadow">
+                <span>Oracle Vector Search</span>
+              </div>
+            </div>
           </div>
 
           <div className="pb-4">
-            <h2 className="text-2xl font-semibold mb-2 border-b border-black">
-              Contacts
-            </h2>
             <div className="flex gap-x-2 justify-center">
               <Link
                 href="https://www.linkedin.com/in/jonathan--trujillo/"
