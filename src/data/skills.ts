@@ -4,6 +4,7 @@ import {
   SiCypress,
   SiDrizzle,
   SiExpo,
+  SiExpress,
   SiFigma,
   SiFirebase,
   SiFlask,
@@ -82,6 +83,10 @@ export const SKILLS = {
     {
       name: "Flask",
       icon: SiFlask,
+    },
+    {
+      name: "Express",
+      icon: SiExpress,
     },
     {
       name: "Framer Motion",
