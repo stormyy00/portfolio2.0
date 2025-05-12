@@ -38,12 +38,12 @@ export const EXPERIENCE: experienceProps[] = [
     date: "CS 105",
   },
   {
-    title: "Project Manager & Software Engineer",
+    title: "Project Manager & Web Developer",
     company: "ACM UCR",
     description: [
       "Surveys basic concepts and techniques underpinning modern AI including problem solving, automated reasoning, game AI, vision and language, neural networks, and robotics. Explores history, ethics, use cases, and applications. Introduces basic use of Python for building and using AI but expects no prior experience. Intended for non-engineering majors",
     ],
-    date: "Jun 2024 - Sept 2024",
+    date: "Jun 2023 - Jun 2025",
   },
   {
     title: "Frontend Developer",
@@ -68,7 +68,9 @@ export const EXPERIENCE: experienceProps[] = [
     title: "Software Engineer",
     company: "RoseHack",
     description: [
-      "Surveys basic concepts and techniques underpinning modern AI including problem solving, automated reasoning, game AI, vision and language, neural networks, and robotics. Explores history, ethics, use cases, and applications. Introduces basic use of Python for building and using AI but expects no prior experience. Intended for non-engineering majors",
+      "Built a real-time metric tool for hackathon participant data, automating categorization & aggregation of details by role, optimizing Firebase storage, & reducing query complexity for on-demand visualizations",
+
+      "Collaborated with cross-functional committees, including UI/UX+Marketing, increasing user engagement by 40%.",
     ],
     date: "Jul 2024 - Jan 2025",
   },
@@ -84,8 +86,9 @@ export const EXPERIENCE: experienceProps[] = [
     title: "CS 110 Grader",
     company: "UCR",
     description: [
-      "Surveys basic concepts and techniques underpinning modern AI including problem solving, automated reasoning, game AI, vision and language, neural networks, and robotics. Explores history, ethics, use cases, and applications. Introduces basic use of Python for building and using AI but expects no prior experience. Intended for non-engineering majors",
+      "Graded quizzes and lab demos for 120 students and provided feedback on personal portfolios",
+      "Created 2 labs in React.js to teach the fundamentals of the framework.",
     ],
-    date: "Jul 2024 - Nov 2024",
+    date: "Apr 2024 - Jun 2024",
   },
 ];
