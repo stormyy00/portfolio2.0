@@ -440,6 +440,157 @@ export const PROJECTS: Projectprops[] = [
     slug: "rosehack-2025",
     image: rosehack,
   },
+  {
+    name: "MoodReal",
+    short_desc: "cool",
+    description: [
+      {
+        header: "About",
+        description:
+          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqua.",
+      },
+      {
+        header: "Why",
+        description: [
+          "Hackathon.js is a hackathon platform that allows users to create and manage hackathons. It provides features such as team management, project submission, and judging.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        ],
+        image: CitrusHack,
+      },
+    ],
+    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    link: [
+      {
+        name: "Github",
+        link: "https://github.com/",
+        icon: Github,
+      },
+      {
+        name: "Website",
+        link: "https://github.com/",
+        icon: link,
+      },
+      {
+        name: "Figma",
+        link: "https://github.com/",
+        icon: Figma,
+      },
+    ],
+    slug: "mood-real",
+    image: rosehack,
+  },
+  {
+    name: "PC Cooling System",
+    short_desc: "cool",
+    description: [
+      {
+        header: "About",
+        description:
+          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqua.",
+      },
+      {
+        header: "Why",
+        description: [
+          "Hackathon.js is a hackathon platform that allows users to create and manage hackathons. It provides features such as team management, project submission, and judging.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        ],
+        image: CitrusHack,
+      },
+    ],
+    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    link: [
+      {
+        name: "Github",
+        link: "https://github.com/",
+        icon: Github,
+      },
+      {
+        name: "Website",
+        link: "https://github.com/",
+        icon: link,
+      },
+      {
+        name: "Figma",
+        link: "https://github.com/",
+        icon: Figma,
+      },
+    ],
+    slug: "cooling-system",
+    image: rosehack,
+  },
+  {
+    name: "Airbnb Analysis",
+    short_desc: "cool",
+    description: [
+      {
+        header: "About",
+        description:
+          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqua.",
+      },
+      {
+        header: "Why",
+        description: [
+          "Hackathon.js is a hackathon platform that allows users to create and manage hackathons. It provides features such as team management, project submission, and judging.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        ],
+        image: CitrusHack,
+      },
+    ],
+    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    link: [
+      {
+        name: "Github",
+        link: "https://github.com/",
+        icon: Github,
+      },
+      {
+        name: "Website",
+        link: "https://github.com/",
+        icon: link,
+      },
+    ],
+    slug: "airbnb-analysis",
+    image: rosehack,
+  },
+  {
+    name: "Planner",
+    short_desc: "cool",
+    description: [
+      {
+        header: "About",
+        description:
+          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqua.",
+      },
+      {
+        header: "Why",
+        description: [
+          "Hackathon.js is a hackathon platform that allows users to create and manage hackathons. It provides features such as team management, project submission, and judging.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        ],
+        image: CitrusHack,
+      },
+    ],
+    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    link: [
+      {
+        name: "Github",
+        link: "https://github.com/",
+        icon: Github,
+      },
+      {
+        name: "Website",
+        link: "https://github.com/",
+        icon: link,
+      },
+      {
+        name: "Figma",
+        link: "https://github.com/",
+        icon: Figma,
+      },
+    ],
+    slug: "planner",
+    image: rosehack,
+  },
 ];
 
 export const getProjectBySlug = (slug: string) =>

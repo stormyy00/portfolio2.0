@@ -1,12 +1,18 @@
-import Projects from "@/components/projects";
-import { PROJECTS } from "@/data/projects";
+"use client";
 
-const page = () => {
+import Projects from "@/components/projects";
+import Toolbar from "@/components/toolbar";
+import { PROJECTS } from "@/data/projects";
+import { useState } from "react";
+
+const Page = () => {
+  const [search, setSearch] = useState(PROJECTS);
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-0">
-      <Projects data={PROJECTS} />
+      <Toolbar data={PROJECTS} setSearch={setSearch} />
+      <Projects data={search} amount={17} />
     </div>
   );
 };
 
-export default page;
+export default Page;

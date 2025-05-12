@@ -19,11 +19,12 @@ const About = () => {
               About me
             </h2>
             <p>
-              I am currently software engineer at{" "}
+              I am currently a software engineer at{" "}
               <span className="text-jt-lightblue font-semibold"> EFG</span>,
-              working in creating a protype to help generate marketing content
+              working in creating a prototype to help generate marketing content
               for social amplification. I am currently finishing my{" "}
-              <span className="font-semibold">Bachelors of Science</span> in
+              <span className="font-semibold">Bachelor{"'"}s of Science</span>{" "}
+              in
               <span className="font-semibold"> Computer Science</span> at the{" "}
               <span className="text-jt-lightblue font-semibold">
                 University of California, Riverside{" "}
@@ -45,9 +46,15 @@ const About = () => {
               Credentials{" "}
             </div>
             <div className="w-fit mt-2">
-              <div className="flex items-center gap-2 text-black bg-jt-dark p-2 rounded-md shadow">
-                <span>Google Cloud Foundations</span>
-              </div>
+              <Link
+                href={
+                  "https://www.credly.com/badges/cdbf60d3-c9b0-4106-b28f-7b5efdf9ae72/public_url"
+                }
+                target="_blank"
+                className="flex items-center gap-2 text-black bg-jt-dark p-2 rounded-md shadow"
+              >
+                <span>Google Cloud Computing Foundations</span>
+              </Link>
               <div className="flex items-center gap-2 text-black bg-jt-dark p-2 rounded-md shadow">
                 <span>Oracle Vector Search</span>
               </div>
