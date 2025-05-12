@@ -6,6 +6,7 @@ import autoauto from "../../public/projects/auto-auto.png";
 import cs166 from "../../public/projects/cs166.png";
 import cs178 from "../../public/projects/cs178.png";
 import learnai from "../../public/projects/learnai.png";
+import galpress from "../../public/projects/galpress.png";
 import Figma from "../../public/icons/figma.svg";
 import Github from "../../public/icons/github.svg";
 import link from "../../public/icons/link.svg";
@@ -282,7 +283,7 @@ export const PROJECTS: Projectprops[] = [
       },
     ],
     slug: "gals-press",
-    image: CitrusHack,
+    image: galpress,
   },
   {
     name: "CutieHack",
@@ -480,6 +481,162 @@ export const PROJECTS: Projectprops[] = [
     image: rosehack,
   },
   {
+    name: "PAD",
+    short_desc: "cool",
+    description: [
+      {
+        header: "About",
+        description:
+          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqua.",
+      },
+      {
+        header: "Why",
+        description: [
+          "Hackathon.js is a hackathon platform that allows users to create and manage hackathons. It provides features such as team management, project submission, and judging.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        ],
+        image: CitrusHack,
+      },
+    ],
+    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    link: [
+      {
+        name: "Github",
+        link: "https://github.com/",
+        icon: Github,
+      },
+      {
+        name: "Website",
+        link: "https://github.com/",
+        icon: link,
+      },
+      {
+        name: "Figma",
+        link: "https://github.com/",
+        icon: Figma,
+      },
+    ],
+    slug: "mood-real",
+    image: rosehack,
+  },
+  {
+    name: "HISS",
+    short_desc: "cool",
+    description: [
+      {
+        header: "About",
+        description:
+          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqua.",
+      },
+      {
+        header: "Why",
+        description: [
+          "Hackathon.js is a hackathon platform that allows users to create and manage hackathons. It provides features such as team management, project submission, and judging.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        ],
+        image: CitrusHack,
+      },
+    ],
+    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    link: [
+      {
+        name: "Github",
+        link: "https://github.com/",
+        icon: Github,
+      },
+      {
+        name: "Website",
+        link: "https://github.com/",
+        icon: link,
+      },
+      {
+        name: "Figma",
+        link: "https://github.com/",
+        icon: Figma,
+      },
+    ],
+    slug: "mood-real",
+    image: rosehack,
+  },
+  {
+    name: "R'tools",
+    short_desc: "cool",
+    description: [
+      {
+        header: "About",
+        description:
+          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqua.",
+      },
+      {
+        header: "Why",
+        description: [
+          "Hackathon.js is a hackathon platform that allows users to create and manage hackathons. It provides features such as team management, project submission, and judging.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        ],
+        image: CitrusHack,
+      },
+    ],
+    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    link: [
+      {
+        name: "Github",
+        link: "https://github.com/",
+        icon: Github,
+      },
+      {
+        name: "Website",
+        link: "https://github.com/",
+        icon: link,
+      },
+      {
+        name: "Figma",
+        link: "https://github.com/",
+        icon: Figma,
+      },
+    ],
+    slug: "mood-real",
+    image: rosehack,
+  },
+  {
+    name: "AIS",
+    short_desc: "cool",
+    description: [
+      {
+        header: "About",
+        description:
+          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqua.",
+      },
+      {
+        header: "Why",
+        description: [
+          "Hackathon.js is a hackathon platform that allows users to create and manage hackathons. It provides features such as team management, project submission, and judging.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        ],
+        image: CitrusHack,
+      },
+    ],
+    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    link: [
+      {
+        name: "Github",
+        link: "https://github.com/",
+        icon: Github,
+      },
+      {
+        name: "Website",
+        link: "https://github.com/",
+        icon: link,
+      },
+      {
+        name: "Figma",
+        link: "https://github.com/",
+        icon: Figma,
+      },
+    ],
+    slug: "mood-real",
+    image: rosehack,
+  },
+  {
     name: "PC Cooling System",
     short_desc: "cool",
     description: [
@@ -519,6 +676,45 @@ export const PROJECTS: Projectprops[] = [
     image: rosehack,
   },
   {
+    name: "Art Factory",
+    short_desc: "cool",
+    description: [
+      {
+        header: "About",
+        description:
+          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqua.",
+      },
+      {
+        header: "Why",
+        description: [
+          "Hackathon.js is a hackathon platform that allows users to create and manage hackathons. It provides features such as team management, project submission, and judging.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        ],
+        image: CitrusHack,
+      },
+    ],
+    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    link: [
+      {
+        name: "Github",
+        link: "https://github.com/",
+        icon: Github,
+      },
+      {
+        name: "Website",
+        link: "https://github.com/",
+        icon: link,
+      },
+      {
+        name: "Figma",
+        link: "https://github.com/",
+        icon: Figma,
+      },
+    ],
+    slug: "mood-real",
+    image: rosehack,
+  },
+  {
     name: "Airbnb Analysis",
     short_desc: "cool",
     description: [
@@ -550,6 +746,45 @@ export const PROJECTS: Projectprops[] = [
       },
     ],
     slug: "airbnb-analysis",
+    image: rosehack,
+  },
+  {
+    name: "BobaThoughts",
+    short_desc: "cool",
+    description: [
+      {
+        header: "About",
+        description:
+          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqua.",
+      },
+      {
+        header: "Why",
+        description: [
+          "Hackathon.js is a hackathon platform that allows users to create and manage hackathons. It provides features such as team management, project submission, and judging.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        ],
+        image: CitrusHack,
+      },
+    ],
+    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    link: [
+      {
+        name: "Github",
+        link: "https://github.com/",
+        icon: Github,
+      },
+      {
+        name: "Website",
+        link: "https://github.com/",
+        icon: link,
+      },
+      {
+        name: "Figma",
+        link: "https://github.com/",
+        icon: Figma,
+      },
+    ],
+    slug: "mood-real",
     image: rosehack,
   },
   {

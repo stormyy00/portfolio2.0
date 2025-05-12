@@ -10,7 +10,7 @@ const Page = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-0">
       <Toolbar data={PROJECTS} setSearch={setSearch} />
-      <Projects data={search} amount={17} />
+      <Projects data={search} amount={22} />
     </div>
   );
 };
