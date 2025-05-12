@@ -20,14 +20,15 @@ const equipment = [
 ];
 
 const About = () => (
-  <div className="w-full mx-auto px-6 py-16 bg-white">
+  <div className="w-full relative mx-auto px-6 py-16 bg-black text-whit z-0">
+    <div className="bg-gradient-to-r from-[#3CCDE3]/40 to-[#0B00A4]/40 blur-3xl w-1/3 h-3/5 absolute top-1/2 -right-9 -z-10 " />
     <div className="mb-12 text-center">
       <h2 className="text-4xl font-extrabold">About Me</h2>
       <p className="mt-2 text-gray-600"></p>
     </div>
 
     <div>
-      <h3 className="text-2xl font-semibold text-black mb-6">Equipment</h3>
+      <h3 className="text-2xl font-semibold text-white mb-6">Equipment</h3>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {equipment.map(({ icon, title, details }) => (
           <div

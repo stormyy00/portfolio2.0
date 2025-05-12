@@ -12,7 +12,7 @@ const page = () => {
       <Home />
       <About />
       <Experience />
-      <Projects data={PROJECTS} />
+      <Projects data={PROJECTS} amount={11} />
     </div>
   );
 };

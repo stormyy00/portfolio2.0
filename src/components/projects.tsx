@@ -2,7 +2,13 @@ import React from "react";
 import Card from "./card";
 import { Projectprops } from "@/types";
 
-const Projects = ({ data }: { data: Projectprops[] }) => {
+const Projects = ({
+  data,
+  amount,
+}: {
+  data: Projectprops[];
+  amount: number;
+}) => {
   return (
     <div
       id="projects"
@@ -18,16 +24,18 @@ const Projects = ({ data }: { data: Projectprops[] }) => {
       </div>
       <div className="flex justify-center w-full">
         <div className="flex flex-col md:flex-row md:w-full justify-center md:justify-between flex-wrap mt-[5%]">
-          {data.map(({ name, short_desc, slug, image, link }, index) => (
-            <Card
-              key={index}
-              name={name}
-              description={short_desc}
-              slug={slug}
-              link={link}
-              image={image}
-            />
-          ))}
+          {data
+            .slice(0, amount)
+            .map(({ name, short_desc, slug, image, link }, index) => (
+              <Card
+                key={index}
+                name={name}
+                description={short_desc}
+                slug={slug}
+                link={link}
+                image={image}
+              />
+            ))}
         </div>
       </div>
     </div>
