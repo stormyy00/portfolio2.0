@@ -7,7 +7,7 @@ const Navigation = () => {
   const path = usePathname();
 
   return (
-    <div className="flex justify-between items-center w-full py-6 px-4 md:px-8">
+    <div className="flex justify-between items-center w-full py-3 px-4 md:px-8">
       <Link
         href="/"
         className="text-2xl font-bold text-jt-lightblue hover:opacity-90 transition-opacity"
