@@ -7,6 +7,13 @@ import cs166 from "../../public/projects/cs166.png";
 import cs178 from "../../public/projects/cs178.png";
 import learnai from "../../public/projects/learnai.png";
 import galpress from "../../public/projects/galpress.png";
+import pad from "../../public/projects/PAD.png";
+import hiss from "../../public/projects/HISS.png";
+import art from "../../public/projects/art.png";
+// import ais from "../../public/projects/learnai.png";
+import mood from "../../public/projects/mood.png";
+import hackathon from "../../public/projects/hackathon.png";
+import rtools from "../../public/projects/rtools.png";
 import Figma from "../../public/icons/figma.svg";
 import Github from "../../public/icons/github.svg";
 import link from "../../public/icons/link.svg";
@@ -127,7 +134,7 @@ export const PROJECTS: Projectprops[] = [
       },
     ],
     slug: "aurora",
-    image: CitrusHack,
+    image: hackathon,
   },
   {
     name: "UCR CSE AI Hub",
@@ -478,7 +485,7 @@ export const PROJECTS: Projectprops[] = [
       },
     ],
     slug: "mood-real",
-    image: rosehack,
+    image: mood,
   },
   {
     name: "PAD",
@@ -516,8 +523,8 @@ export const PROJECTS: Projectprops[] = [
         icon: Figma,
       },
     ],
-    slug: "mood-real",
-    image: rosehack,
+    slug: "pad",
+    image: pad,
   },
   {
     name: "HISS",
@@ -555,8 +562,8 @@ export const PROJECTS: Projectprops[] = [
         icon: Figma,
       },
     ],
-    slug: "mood-real",
-    image: rosehack,
+    slug: "hiss",
+    image: hiss,
   },
   {
     name: "R'tools",
@@ -594,8 +601,8 @@ export const PROJECTS: Projectprops[] = [
         icon: Figma,
       },
     ],
-    slug: "mood-real",
-    image: rosehack,
+    slug: "rtools",
+    image: rtools,
   },
   {
     name: "AIS",
@@ -711,8 +718,8 @@ export const PROJECTS: Projectprops[] = [
         icon: Figma,
       },
     ],
-    slug: "mood-real",
-    image: rosehack,
+    slug: "art-factory",
+    image: art,
   },
   {
     name: "Airbnb Analysis",

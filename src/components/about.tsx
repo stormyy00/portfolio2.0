@@ -8,7 +8,7 @@ const About = () => {
     <div id="about" className="py-16 text-white w-ful relative">
       <div className="bg-gradient-to-r from-[#3CCDE3]/40 to-[#0B00A4]/40 blur-3xl w-1/3 h-4/5 absolute -top-[0%] right-0 -z-10" />
       {/* <div className="bg-gradient-to-r from-[#3CCDE3]/40 to-[#0B00A4]/40 blur-3xl w-1/3 h-3/5 absolute -top-[0%] left-4 -z-10 overflow-clip" /> */}
-      <div className="flex flex-col items-start mb-12">
+      <div className="flex flex-col items-start mb-6">
         <div className="text-2xl text-left text-jt-lightblue mx-4 my-1">
           About
         </div>
