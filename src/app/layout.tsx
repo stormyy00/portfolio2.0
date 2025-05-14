@@ -18,8 +18,9 @@ const geistMono = localFont({
 
 const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-poppins",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+
+  variable: "--font-poppins", // Optional: Allows you to define a custom CSS variable
 });
 
 export const metadata: Metadata = {

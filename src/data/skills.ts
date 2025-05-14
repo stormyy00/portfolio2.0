@@ -120,3 +120,21 @@ export const SKILLS = {
   //   { name: "Oracle Vector Search", icon: SiGoogle },
   // ],
 };
+
+export const CREDENTIALS = [
+  {
+    name: "Google Cloud Foundations",
+    link: "https://www.credly.com/badges/cdbf60d3-c9b0-4106-b28f-7b5efdf9ae72/public_url",
+    icon: SiGoogle,
+  },
+  {
+    name: "Oracle AI Vector Search",
+    link: "https://www.oracle.com/webfolder/technetwork/tutorials/tutorial/ai-vector-search/index.html",
+    icon: SiGoogle,
+  },
+  {
+    name: "Intro to FinOps",
+    link: "https://verify.skilljar.com/c/mqc484aci96o",
+    icon: SiGoogle,
+  },
+];

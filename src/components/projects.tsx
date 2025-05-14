@@ -23,18 +23,19 @@ const Projects = ({
         PROJECTS
       </div>
       <div className="flex justify-center w-full">
-        <div className="flex flex-col md:flex-row md:w-full justify-center md:justify-between flex-wrap mt-[5%]">
+        <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-0 mt-[5%] w-full">
           {data
             .slice(0, amount)
             .map(({ name, short_desc, slug, image, link }, index) => (
-              <Card
-                key={index}
-                name={name}
-                description={short_desc}
-                slug={slug}
-                link={link}
-                image={image}
-              />
+              <div key={index} className="w-full md:w-1/3 m-4 md:m-0">
+                <Card
+                  name={name}
+                  description={short_desc}
+                  slug={slug}
+                  link={link}
+                  image={image}
+                />
+              </div>
             ))}
         </div>
       </div>
