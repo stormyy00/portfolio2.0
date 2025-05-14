@@ -33,15 +33,24 @@ export const EXPERIENCE: experienceProps[] = [
     title: "Director & Software Engineer",
     company: "CitrusHack",
     description: [
-      "Surveys basic concepts and techniques underpinning modern AI including problem solving, automated reasoning, game AI, vision and language, neural networks, and robotics. Explores history, ethics, use cases, and applications. Introduces basic use of Python for building and using AI but expects no prior experience. Intended for non-engineering majors",
+      "Organized and executed a 24-hour hackathon with 200+ participants, fostering innovation and collaboration among students.",
+      "Led a cross-functional team of 20+ across operations, sponsorship, marketing, UI/UX, software engineering, and parent organization coordination to ensure a successful event.",
+      "Managed a team of 5 developers to build a web application supporting mentor assistance, onboarding, and team development.",
+      "Developed the official CitrusHack web platform using Next.js and Firebase to streamline event logistics and participant access.",
+      "Led QA testing with the operations team, resulting in a 90% reduction in bugs at deployment.",
     ],
-    date: "CS 105",
+    date: "Dec 2024 - Apr 2025",
   },
   {
     title: "Project Manager & Web Developer",
     company: "ACM UCR",
     description: [
-      "Surveys basic concepts and techniques underpinning modern AI including problem solving, automated reasoning, game AI, vision and language, neural networks, and robotics. Explores history, ethics, use cases, and applications. Introduces basic use of Python for building and using AI but expects no prior experience. Intended for non-engineering majors",
+      "Initiated and led 5+ projects, including websites and educational tools for UCR clubs, while mentoring and guiding 200+ student developers",
+      "Collaborated with clients and UI/UX designers to gather requirements and define project specifications",
+      "Developed static front-end websites with a team of 8+ developers to strengthen social media presence and outreach for student organizations",
+      "Hosted weekly web development workshops to educate and onboard new members",
+      "Rebuilt ACM’s project boilerplate using Shadcn, TypeScript, and React Query to accelerate development across all club projects",
+      "Designed a NoSQL database template to enable seamless integration of dynamic table data into front-end applications",
     ],
     date: "Jun 2023 - Jun 2025",
   },
@@ -49,9 +58,10 @@ export const EXPERIENCE: experienceProps[] = [
     title: "Frontend Developer",
     company: "PearAI",
     description: [
-      "Surveys basic concepts and techniques underpinning modern AI including problem solving, automated reasoning, game AI, vision and language, neural networks, and robotics. Explores history, ethics, use cases, and applications. Introduces basic use of Python for building and using AI but expects no prior experience. Intended for non-engineering majors",
+      "Authored product documentation and feature guides to improve the onboarding experience for new users.",
+      "Developed PearAI’s landing page using Next.js and Supabase, including implementation of pricing plan components.",
     ],
-    date: "Jul 2024 - Nov 2024",
+    date: "Jul 2024 – Nov 2024",
   },
   {
     title: "Software Engineer Intern",
@@ -68,9 +78,9 @@ export const EXPERIENCE: experienceProps[] = [
     title: "Software Engineer",
     company: "RoseHack",
     description: [
-      "Built a real-time metric tool for hackathon participant data, automating categorization & aggregation of details by role, optimizing Firebase storage, & reducing query complexity for on-demand visualizations",
-
-      "Collaborated with cross-functional committees, including UI/UX+Marketing, increasing user engagement by 40%.",
+      "Built a real-time metrics dashboard for hackathon participant data, automating categorization and aggregation by role, optimizing Firebase storage, and reducing query complexity for live visualizations",
+      "Collaborated with cross-functional teams including UI/UX and Marketing, increasing user engagement by 40%",
+      "Wrote automation scripts to collect user participation data, reducing manual data entry by 80%",
     ],
     date: "Jul 2024 - Jan 2025",
   },
@@ -78,7 +88,8 @@ export const EXPERIENCE: experienceProps[] = [
     title: "Software Engineer",
     company: "CutieHack",
     description: [
-      "Surveys basic concepts and techniques underpinning modern AI including problem solving, automated reasoning, game AI, vision and language, neural networks, and robotics. Explores history, ethics, use cases, and applications. Introduces basic use of Python for building and using AI but expects no prior experience. Intended for non-engineering majors",
+      "Developed a web application for participant management, enabling team formation and mentor matching using Next.js and Firebase.",
+      "Provided on-call technical support during the event, actively monitoring and maintaining website uptime and functionality.",
     ],
     date: "Jul 2024 - Nov 2024",
   },

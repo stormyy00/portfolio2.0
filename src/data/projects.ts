@@ -38,7 +38,13 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Flask",
+      "Gemini Flash 2.5",
+      "Supabase",
+    ],
     link: [
       {
         name: "Github",
@@ -67,7 +73,7 @@ export const PROJECTS: Projectprops[] = [
       {
         header: "About",
         description:
-          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqua.",
+          "A major issue with today’s advancing technologies is that they mostly benefit consumer products or companies with big budgets and dedicated teams. But we wanted to build for the underdogs: nonprofits that often lack the time, staff, or resources to run full-scale marketing operations. These organizations are usually run by just a few passionate people serving their communities without expecting profit.",
       },
       {
         header: "Why",
@@ -78,7 +84,16 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Next Auth",
+      "Firebase",
+      "PostHog",
+      "Redis",
+      "Express",
+      "Gemini Flash 2.5",
+    ],
     link: [
       {
         name: "Github",
@@ -117,7 +132,13 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Firebase",
+      "Next Auth",
+      "Cypress.io",
+    ],
     link: [
       {
         name: "Github",
@@ -156,7 +177,7 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: ["Next.js", "Tailwind CSS", "Shacn", "Prettier"],
     link: [
       {
         name: "Github",
@@ -195,7 +216,14 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Supabase",
+      "Redis",
+      "Nodemailer",
+      "Express",
+    ],
     link: [
       {
         name: "Github",
@@ -273,7 +301,13 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Hugging Face",
+      "Flask",
+      "Vader Sentiment",
+    ],
     link: [
       {
         name: "Github",
@@ -351,7 +385,7 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: ["Next.js", "Tailwind CSS", "Java", "PostgreSQL"],
     link: [
       {
         name: "Github",
@@ -469,7 +503,7 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: ["React Native", "Tailwind CSS", "Firebase", "Flask", "OpenAI"],
     link: [
       {
         name: "Github",
@@ -666,7 +700,7 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: ["C++", "Arduino"],
     link: [
       {
         name: "Github",
@@ -744,7 +778,7 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: ["Next.js", "Jupyter Notebook", "Flask", "XLG Boost"],
     link: [
       {
         name: "Github",
@@ -817,7 +851,7 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: ["Next.js", "Tailwind CSS", "Drizzle ORM", "PostgreSQL"],
     link: [
       {
         name: "Github",
