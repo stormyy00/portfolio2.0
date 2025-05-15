@@ -2,6 +2,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import Skills from "./skils";
+import { CREDENTIALS } from "@/data/skills";
 
 const About = () => {
   return (
@@ -45,18 +46,16 @@ const About = () => {
               Credentials
             </h2>
             <div className="flex flex-wrap gap-3 mt-4">
-              <Link
-                href={
-                  "https://www.credly.com/badges/cdbf60d3-c9b0-4106-b28f-7b5efdf9ae72/public_url"
-                }
-                target="_blank"
-                className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 transition-colors px-4 py-2 rounded-lg text-black"
-              >
-                <span>Google Cloud Computing Foundations</span>
-              </Link>
-              <div className="flex items-center gap-2 bg-gray-100 px-4 py-2 rounded-lg text-black">
-                <span>Oracle AI Vector Search</span>
-              </div>
+              {CREDENTIALS.map(({ name, link }, index) => (
+                <Link
+                  href={link}
+                  target="_blank"
+                  key={index}
+                  className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 transition-colors px-4 py-2 rounded-lg text-black"
+                >
+                  <span>{name}</span>
+                </Link>
+              ))}
             </div>
           </div>
 

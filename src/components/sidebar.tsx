@@ -29,7 +29,7 @@ const Sidebar = () => {
               animate={{ opacity: isOpen ? 1 : 0 }}
               initial={{ opacity: 0 }}
             >
-              SHOWTIME
+              <Menu size={32} className="text-white" />
             </motion.p>
           )}
         </div>

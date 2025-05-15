@@ -21,7 +21,8 @@ import link from "../../public/icons/link.svg";
 export const PROJECTS: Projectprops[] = [
   {
     name: "GitHub AI Agent",
-    short_desc: "cool",
+    short_desc:
+      "Built an to automatically review, merge, & modify code, cutting manual review for developers",
     description: [
       {
         header: "About",
@@ -37,7 +38,13 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Flask",
+      "Gemini Flash 2.5",
+      "Supabase",
+    ],
     link: [
       {
         name: "Github",
@@ -60,12 +67,13 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "Ttickle Platform",
-    short_desc: "cool",
+    short_desc:
+      "AI Marketing Platform for social amplification for underrepresented communities",
     description: [
       {
         header: "About",
         description:
-          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqua.",
+          "A major issue with today’s advancing technologies is that they mostly benefit consumer products or companies with big budgets and dedicated teams. But we wanted to build for the underdogs: nonprofits that often lack the time, staff, or resources to run full-scale marketing operations. These organizations are usually run by just a few passionate people serving their communities without expecting profit.",
       },
       {
         header: "Why",
@@ -76,7 +84,16 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Next Auth",
+      "Firebase",
+      "PostHog",
+      "Redis",
+      "Express",
+      "Gemini Flash 2.5",
+    ],
     link: [
       {
         name: "Github",
@@ -99,7 +116,7 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "Aurora",
-    short_desc: "cool",
+    short_desc: "Hackthon website template that powered UCR Hackathons",
     description: [
       {
         header: "About",
@@ -115,7 +132,13 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Firebase",
+      "Next Auth",
+      "Cypress.io",
+    ],
     link: [
       {
         name: "Github",
@@ -138,7 +161,7 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "UCR CSE AI Hub",
-    short_desc: "cool",
+    short_desc: "AI Resource Hub for UCR CSE students",
     description: [
       {
         header: "About",
@@ -154,7 +177,7 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: ["Next.js", "Tailwind CSS", "Shacn", "Prettier"],
     link: [
       {
         name: "Github",
@@ -177,7 +200,7 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "Auto Auto",
-    short_desc: "cool",
+    short_desc: "Email automation platform for organizations and companies",
     description: [
       {
         header: "About",
@@ -193,7 +216,14 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Supabase",
+      "Redis",
+      "Nodemailer",
+      "Express",
+    ],
     link: [
       {
         name: "Github",
@@ -216,7 +246,7 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "Hackathon.js",
-    short_desc: "cool",
+    short_desc: "Website template builder for hackathons",
     description: [
       {
         header: "About",
@@ -255,7 +285,7 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "GalsPress",
-    short_desc: "cool",
+    short_desc: "Analytics platform for detemining the bias of a news article",
     description: [
       {
         header: "About",
@@ -271,7 +301,13 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Hugging Face",
+      "Flask",
+      "Vader Sentiment",
+    ],
     link: [
       {
         name: "Github",
@@ -294,7 +330,7 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "CutieHack",
-    short_desc: "cool",
+    short_desc: "Cutiehack Hackathon website",
     description: [
       {
         header: "About",
@@ -328,12 +364,12 @@ export const PROJECTS: Projectprops[] = [
         icon: Figma,
       },
     ],
-    slug: "auto-auto",
+    slug: "cutiehack",
     image: cutiehack,
   },
   {
     name: "Game Rental System",
-    short_desc: "cool",
+    short_desc: "Rental plaform designed for renting games from customers",
     description: [
       {
         header: "About",
@@ -349,7 +385,7 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: ["Next.js", "Tailwind CSS", "Java", "PostgreSQL"],
     link: [
       {
         name: "Github",
@@ -372,7 +408,7 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "CitrusHack 2025",
-    short_desc: "cool",
+    short_desc: "CitrusHack Hackathon website",
     description: [
       {
         header: "About",
@@ -411,7 +447,7 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "RoseHack 2025",
-    short_desc: "cool",
+    short_desc: "RoseHack Hackathon website",
     description: [
       {
         header: "About",
@@ -450,7 +486,8 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "MoodReal",
-    short_desc: "cool",
+    short_desc:
+      "Mental Health platform where users can check up with their friends",
     description: [
       {
         header: "About",
@@ -466,7 +503,7 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: ["React Native", "Tailwind CSS", "Firebase", "Flask", "OpenAI"],
     link: [
       {
         name: "Github",
@@ -489,7 +526,7 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "PAD",
-    short_desc: "cool",
+    short_desc: "Website for Phi Alpha Selta fraternity",
     description: [
       {
         header: "About",
@@ -528,7 +565,7 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "HISS",
-    short_desc: "cool",
+    short_desc: "Website for Higlanders in Statistics Society",
     description: [
       {
         header: "About",
@@ -567,7 +604,8 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "R'tools",
-    short_desc: "cool",
+    short_desc:
+      "Visualization tool for understing data structures and algorithms",
     description: [
       {
         header: "About",
@@ -606,7 +644,7 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "AIS",
-    short_desc: "cool",
+    short_desc: "Website for Assocation of Information Systems at UCR",
     description: [
       {
         header: "About",
@@ -645,7 +683,8 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "PC Cooling System",
-    short_desc: "cool",
+    short_desc:
+      "PC cooling system protype that mimics PC cooling within a system",
     description: [
       {
         header: "About",
@@ -661,7 +700,7 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: ["C++", "Arduino"],
     link: [
       {
         name: "Github",
@@ -684,7 +723,7 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "Art Factory",
-    short_desc: "cool",
+    short_desc: "Website for Art Factory club at UCR",
     description: [
       {
         header: "About",
@@ -723,7 +762,7 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "Airbnb Analysis",
-    short_desc: "cool",
+    short_desc: "An analysis of the Airbnb dataset for lisitng in Los Angeles",
     description: [
       {
         header: "About",
@@ -739,7 +778,7 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: ["Next.js", "Jupyter Notebook", "Flask", "XLG Boost"],
     link: [
       {
         name: "Github",
@@ -757,7 +796,7 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "BobaThoughts",
-    short_desc: "cool",
+    short_desc: "Boba review platform for boba shops around the world",
     description: [
       {
         header: "About",
@@ -796,7 +835,7 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "Planner",
-    short_desc: "cool",
+    short_desc: "Course planner site for UCR students",
     description: [
       {
         header: "About",
@@ -812,7 +851,7 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: ["Next.js", "Tailwind CSS", "Drizzle ORM", "PostgreSQL"],
     link: [
       {
         name: "Github",
