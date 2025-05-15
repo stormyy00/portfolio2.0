@@ -27,7 +27,10 @@ const Projects = ({
           {data
             .slice(0, amount)
             .map(({ name, short_desc, slug, image, link }, index) => (
-              <div key={index} className="w-full md:w-1/3 m-4 md:m-0">
+              <div
+                key={index}
+                className="w-full md:w-1/3 m-4 md:m-0 hover:-translate-y-2 duration-500"
+              >
                 <Card
                   name={name}
                   description={short_desc}

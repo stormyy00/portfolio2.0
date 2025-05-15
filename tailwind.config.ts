@@ -15,7 +15,7 @@ const config: Config = {
           lightblue: "#3CCDE3",
         },
         fontFamily: {
-          poppins: ["var(--font-poppins)"],
+          // poppins: ["var(--font-poppins)"],
         },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
