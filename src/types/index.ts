@@ -7,6 +7,7 @@ export type Projectprops = {
   authors: string[];
   description: {
     header: string;
+    path: string;
     description: string | string[];
     image?: StaticImageData;
   }[];
