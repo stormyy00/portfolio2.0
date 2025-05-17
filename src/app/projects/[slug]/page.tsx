@@ -1,4 +1,3 @@
-// app/projects/[slug]/page.tsx
 import { getProjectBySlug, PROJECTS } from "@/data/projects";
 import Project from "@/components/project";
 import { notFound } from "next/navigation";
@@ -17,8 +16,16 @@ const Page = async ({ params }: props) => {
 
   if (!project) return notFound();
 
-  const { name, description, techstack, image, short_desc, link, slug } =
-    project;
+  const {
+    name,
+    description,
+    techstack,
+    image,
+    short_desc,
+    link,
+    slug,
+    authors,
+  } = project;
 
   return (
     <Project
@@ -29,6 +36,7 @@ const Page = async ({ params }: props) => {
       short_desc={short_desc}
       link={link}
       slug={slug}
+      authors={authors}
     />
   );
 };
