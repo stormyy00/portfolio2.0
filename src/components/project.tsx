@@ -8,6 +8,7 @@ const Project = ({
   techstack,
   link,
   image,
+  authors = ["Jonathan Trujilo"],
 }: Projectprops) => {
   return (
     <div className="relative flex flex-col justify-center items-center text-white">
@@ -31,7 +32,12 @@ const Project = ({
           <h1 className="text-5xl font-bold">{name}</h1>
           <div className="flex items-center space-x-1 ml-0">
             <span className="text-gray-300 font-medium">by</span>
-            <span className="font-medium">Jonathan Trujilo</span>
+            {authors.map((author, index) => (
+              <span key={index} className="text-gray-300 font-medium">
+                {author}
+                {index < authors.length - 1 && ", "}
+              </span>
+            ))}
           </div>
           <div className="flex gap-3 mt-2">
             {techstack.map((tech, index) => (

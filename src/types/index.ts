@@ -4,6 +4,7 @@ export type Projectprops = {
   name: string;
   techstack: string[];
   short_desc: string;
+  authors: string[];
   description: {
     header: string;
     description: string | string[];
