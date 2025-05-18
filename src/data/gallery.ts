@@ -1,10 +1,10 @@
 import bigbear from "../../public/landing.jpg";
-import enter from "../../public/photography/vision/enter.jpg";
-import heart from "../../public/photography/vision/heart.jpg";
-import plants from "../../public/photography/vision/plants.jpg";
-import purple from "../../public/photography/vision/purple.jpg";
-import wall from "../../public/photography/vision/wall.jpg";
-import jerry from "../../public/photography/portraits/jerry.jpg";
+import enter from "../../public/photography/vision/enter.webp";
+import heart from "../../public/photography/vision/heart.webp";
+import plants from "../../public/photography/vision/plants.webp";
+import purple from "../../public/photography/vision/purple.webp";
+import wall from "../../public/photography/vision/wall.webp";
+import jerry from "../../public/photography/portraits/jerry.webp";
 
 export const GALLERY = [
   {
