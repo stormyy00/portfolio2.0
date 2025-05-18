@@ -18,12 +18,10 @@ const Skills = () => {
               {skills.map(({ name, icon: Icon }, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center gap-2 bg-white border border-gray-200 hover:border-jt-lightblue/90 px-4 py-2 rounded-lg shadow-sm transition-all duration-200 group"
+                  className="flex items-center gap-2 px-3 py-2 bg-white/5 border border-white/10 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md hover:border-jt-lightblue/40 transition duration-200"
                 >
-                  <span className="text-gray-600 group-hover:text-jt-lightblue transition-colors">
-                    <Icon size={18} />
-                  </span>
-                  <span>{name}</span>
+                  <Icon size={16} className="text-jt-lightblue" />
+                  <span className="text-sm text-white">{name}</span>
                 </div>
               ))}
             </div>

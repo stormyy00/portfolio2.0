@@ -123,13 +123,13 @@ export const SKILLS = {
 
 export const CREDENTIALS = [
   {
-    name: "Google Cloud Foundations",
+    name: "Google Cloud Computing Foundations",
     link: "https://www.credly.com/badges/cdbf60d3-c9b0-4106-b28f-7b5efdf9ae72/public_url",
     icon: SiGoogle,
   },
   {
     name: "Oracle AI Vector Search",
-    link: "https://www.oracle.com/webfolder/technetwork/tutorials/tutorial/ai-vector-search/index.html",
+    link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=42B7C50CD59655B0F42BD9294CE03B987A6473DE23F0585B5B41A077FB7AB9B7",
     icon: SiGoogle,
   },
   {

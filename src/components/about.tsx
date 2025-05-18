@@ -51,7 +51,7 @@ const About = () => {
                   href={link}
                   target="_blank"
                   key={index}
-                  className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 transition-colors px-4 py-2 rounded-lg text-black"
+                  className="flex items-center gap-2 px-3 py-2 bg-white/5 border border-white/10 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md hover:border-jt-lightblue/40 transition duration-200"
                 >
                   <span>{name}</span>
                 </Link>

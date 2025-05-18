@@ -1,8 +1,15 @@
 import bigbear from "../../public/landing.jpg";
+import enter from "../../public/photography/vision/enter.webp";
+import heart from "../../public/photography/vision/heart.webp";
+import plants from "../../public/photography/vision/plants.webp";
+import purple from "../../public/photography/vision/purple.webp";
+import wall from "../../public/photography/vision/wall.webp";
+import jerry from "../../public/photography/portraits/jerry.webp";
+
 export const GALLERY = [
   {
     name: "My Vision",
-    image: [bigbear],
+    image: [enter, heart, plants, purple, wall],
     link: "me",
     type: "landscape",
   },
@@ -14,7 +21,7 @@ export const GALLERY = [
   },
   {
     name: "Portraits",
-    image: [bigbear],
+    image: [jerry],
     link: "Portraits",
     type: "portrait",
   },
