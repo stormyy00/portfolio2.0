@@ -1,8 +1,15 @@
 import bigbear from "../../public/landing.jpg";
+import enter from "../../public/photography/vision/enter.jpg";
+import heart from "../../public/photography/vision/heart.jpg";
+import plants from "../../public/photography/vision/plants.jpg";
+import purple from "../../public/photography/vision/purple.jpg";
+import wall from "../../public/photography/vision/wall.jpg";
+import jerry from "../../public/photography/portraits/jerry.jpg";
+
 export const GALLERY = [
   {
     name: "My Vision",
-    image: [bigbear],
+    image: [enter, heart, plants, purple, wall],
     link: "me",
     type: "landscape",
   },
@@ -14,7 +21,7 @@ export const GALLERY = [
   },
   {
     name: "Portraits",
-    image: [bigbear],
+    image: [jerry],
     link: "Portraits",
     type: "portrait",
   },
