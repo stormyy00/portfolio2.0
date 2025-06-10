@@ -11,13 +11,14 @@ import {
   SiFramer,
   SiGoogle,
   SiJavascript,
+  SiKubernetes,
+  SiMysql,
   SiNextdotjs,
   SiPostgresql,
   SiPostman,
   SiPython,
   SiReact,
   SiRedis,
-  SiSqlalchemy,
   SiSupabase,
   SiTailwindcss,
   SiTypescript,
@@ -42,8 +43,8 @@ export const SKILLS = {
       icon: SiPostgresql,
     },
     {
-      name: "SQL",
-      icon: SiSqlalchemy,
+      name: "mySQL",
+      icon: SiMysql,
     },
     {
       name: "C++",
@@ -59,7 +60,6 @@ export const SKILLS = {
       name: "Next.js",
       icon: SiNextdotjs,
     },
-
     {
       name: "Supabase",
       icon: SiSupabase,
@@ -131,6 +131,11 @@ export const CREDENTIALS = [
     name: "Oracle AI Vector Search",
     link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=42B7C50CD59655B0F42BD9294CE03B987A6473DE23F0585B5B41A077FB7AB9B7",
     icon: SiGoogle,
+  },
+  {
+    name: "Intro to Kubernetes",
+    link: "https://www.credly.com/badges/b553ef1f-6cea-4e50-8c63-f5c983dc7a74/public_url",
+    icon: SiKubernetes,
   },
   {
     name: "Intro to FinOps",

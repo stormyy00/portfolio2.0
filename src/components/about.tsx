@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import Skills from "./skils";
@@ -51,9 +51,10 @@ const About = () => {
                   href={link}
                   target="_blank"
                   key={index}
-                  className="flex items-center gap-2 px-3 py-2 bg-white/5 border border-white/10 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md hover:border-jt-lightblue/40 transition duration-200"
+                  className="flex items-center gap-2 px-3 py-2 bg-white/10 border border-white/50 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md hover:border-jt-lightblue/40 transition duration-200"
                 >
                   <span>{name}</span>
+                  <ArrowUpRight />
                 </Link>
               ))}
             </div>
