@@ -1,22 +1,22 @@
 import { Projectprops } from "@/types";
-import CitrusHack from "../../public/citrushack.png";
-import cutiehack from "../../public/projects/cutiehack.png";
-import rosehack from "../../public/projects/rosehack.png";
-import autoauto from "../../public/projects/auto-auto.png";
-import cs166 from "../../public/projects/cs166.png";
-import cs178 from "../../public/projects/cs178.png";
-import learnai from "../../public/projects/learnai.png";
-import galpress from "../../public/projects/galpress.png";
-import pad from "../../public/projects/PAD.png";
-import hiss from "../../public/projects/HISS.png";
-import art from "../../public/projects/art.png";
+import CitrusHack from "@/public/citrushack.png";
+import cutiehack from "@/public/projects/cutiehack.png";
+import rosehack from "@/public/projects/rosehack.png";
+import autoauto from "@/public/projects/auto-auto.png";
+import cs166 from "@/public/projects/cs166.png";
+import cs178 from "@/public/projects/cs178.png";
+import learnai from "@/public/projects/learnai.png";
+import galpress from "@/public/projects/galpress.png";
+import pad from "@/public/projects/PAD.png";
+import hiss from "@/public/projects/HISS.png";
+import art from "@/public/projects/art.png";
 // import ais from "../../public/projects/learnai.png";
-import mood from "../../public/projects/mood.png";
-import hackathon from "../../public/projects/hackathon.png";
-import rtools from "../../public/projects/rtools.png";
-import Figma from "../../public/icons/figma.svg";
-import Github from "../../public/icons/github.svg";
-import link from "../../public/icons/link.svg";
+import mood from "@/public/projects/mood.png";
+import hackathon from "@/public/projects/hackathon.png";
+import rtools from "@/public/projects/rtools.png";
+import Figma from "@/public/icons/figma.svg";
+import Github from "@/public/icons/github.svg";
+import link from "@/public/icons/link.svg";
 
 export const PROJECTS: Projectprops[] = [
   {
@@ -298,9 +298,9 @@ export const PROJECTS: Projectprops[] = [
     image: autoauto,
   },
   {
-    name: "Hackathon.js",
-    short_desc: "Website template builder for hackathons",
-    authors: ["Jonathan Trujillo", "Taaha Sayed"],
+    name: "Nuvio",
+    short_desc: "Website cloning builder",
+    authors: ["Jonathan Trujillo"],
     description: [
       {
         header: "About",
@@ -318,11 +318,17 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: [
+      "Next.js",
+      "Tailwind CSS",
+      "FastAPI",
+      "Neon",
+      "Gemini Flash 2.5",
+    ],
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/stormyy00/nuvio",
         icon: Github,
       },
       {
@@ -330,13 +336,8 @@ export const PROJECTS: Projectprops[] = [
         link: "https://github.com/",
         icon: link,
       },
-      {
-        name: "Figma",
-        link: "https://github.com/",
-        icon: Figma,
-      },
     ],
-    slug: "hackathon-js",
+    slug: "nuvio",
     image: CitrusHack,
   },
   {

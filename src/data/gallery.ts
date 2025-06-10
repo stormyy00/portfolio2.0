@@ -1,17 +1,17 @@
-import bigbear from "../../public/landing.jpg";
-import enter from "../../public/photography/vision/enter.webp";
-import heart from "../../public/photography/vision/heart.webp";
-import plants from "../../public/photography/vision/plants.webp";
-import purple from "../../public/photography/vision/purple.webp";
-import wall from "../../public/photography/vision/wall.webp";
-import jerry from "../../public/photography/portraits/jerry.webp";
-import menthy from "../../public/photography/portraits/menthy.webp";
-import theo from "../../public/photography/vision/theo.webp";
-import river from "../../public/photography/seattle/river.webp";
-import beach from "../../public/photography/landscapes/beach.webp";
-import flower from "../../public/photography/landscapes/flowers.webp";
-import sign from "../../public/photography/vision/sign.webp";
-import cart from "../../public/photography/vision/cart.webp";
+import bigbear from "@/public/landing.jpg";
+import enter from "@/public/photography/vision/enter.webp";
+import heart from "@/public/photography/vision/heart.webp";
+import plants from "@/public/photography/vision/plants.webp";
+import purple from "@/public/photography/vision/purple.webp";
+import wall from "@/public/photography/vision/wall.webp";
+import jerry from "@/public/photography/portraits/jerry.webp";
+import menthy from "@/public/photography/portraits/menthy.webp";
+import theo from "@/public/photography/vision/theo.webp";
+import river from "@/public/photography/seattle/river.webp";
+import beach from "@/public/photography/landscapes/beach.webp";
+import flower from "@/public/photography/landscapes/flowers.webp";
+import sign from "@/public/photography/vision/sign.webp";
+import cart from "@/public/photography/vision/cart.webp";
 
 export const GALLERY = [
   {
