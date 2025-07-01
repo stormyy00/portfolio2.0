@@ -1,5 +1,6 @@
 import {
   SiApachespark,
+  SiCentos,
   SiCplusplus,
   SiCypress,
   SiDrizzle,
@@ -12,6 +13,7 @@ import {
   SiGoogle,
   SiJavascript,
   SiKubernetes,
+  SiLinux,
   SiMysql,
   SiNextdotjs,
   SiPostgresql,
@@ -19,9 +21,11 @@ import {
   SiPython,
   SiReact,
   SiRedis,
+  SiRescript,
   SiSupabase,
   SiTailwindcss,
   SiTypescript,
+  SiVmware,
 } from "@icons-pack/react-simple-icons";
 
 export const SKILLS = {
@@ -113,6 +117,10 @@ export const SKILLS = {
       icon: SiPostman,
     },
     { name: "Figma", icon: SiFigma },
+    { name: "Linux", icon: SiLinux },
+    { name: "Centos", icon: SiCentos },
+    { name: "VMWare", icon: SiVmware },
+    { name: "Scripting", icon: SiRescript },
   ],
   // Design: [{ name: "Figma", icon: SiFigma }],
   // Credentials: [
