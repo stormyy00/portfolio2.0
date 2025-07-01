@@ -10,7 +10,8 @@ import galpress from "@/public/projects/galpress.png";
 import pad from "@/public/projects/PAD.png";
 import hiss from "@/public/projects/HISS.png";
 import art from "@/public/projects/art.png";
-// import ais from "../../public/projects/learnai.png";
+import hold from "@/public/projects/hold.png";
+import holddahboard from "@/public/projects/hold-dashboard.png";
 import mood from "@/public/projects/mood.png";
 import hackathon from "@/public/projects/hackathon.png";
 import rtools from "@/public/projects/rtools.png";
@@ -19,6 +20,52 @@ import Github from "@/public/icons/github.svg";
 import link from "@/public/icons/link.svg";
 
 export const PROJECTS: Projectprops[] = [
+  {
+    name: "Hold",
+    short_desc:
+      "A personal link manager to save, organize, and track links for later use",
+    authors: ["Jonathan Trujillo"],
+    description: [
+      {
+        header: "About",
+        path: "about",
+        description:
+          "This project was designed to refine my skills in database management systems, specifically using PostgreSQL, while building a full-stack web application with Next.js and Tailwind CSS. The goal was to create a personal link manager that allows users to save, organize, and track links for later use. I also used this project as a way to experiment with writing optimized SQL queries and explore scalable database design patterns that could support growth beyond a simple MVP",
+      },
+      {
+        header: "Why",
+        path: "why",
+        description: [
+          "I built this app for personal use because I often used Discord as a dumping ground for links, and over time, it became difficult to search for older resources.",
+          "Hold solves this by providing a dedicated, lightweight space where I can quickly save links, group them into folders, and track views over time. It offers a simple, fast, and organized way to manage saved links, whether they're articles I want to read later, tools I want to revisit, or resources I frequently reference.",
+        ],
+        image: holddahboard,
+        // image: CitrusHack,
+      },
+    ],
+    techstack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Neon (PostgreSQL",
+      "Drizzle ORM",
+      "Better Auth",
+      "React Query",
+    ],
+    link: [
+      {
+        name: "Github",
+        link: "https://github.com/hold",
+        icon: Github,
+      },
+      {
+        name: "Website",
+        link: "https://hold-pi.vercel.app",
+        icon: link,
+      },
+    ],
+    slug: "hold",
+    image: hold,
+  },
   {
     name: "GitHub AI Agent",
     short_desc:
@@ -306,14 +353,14 @@ export const PROJECTS: Projectprops[] = [
         header: "About",
         path: "about",
         description:
-          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqua.",
+          "This was originally a coding assgment for Orchid YCW25, where I had to build a website cloning builder that allows users to clone websites and edit them. The goal was to create a platform that allows users to easily create and manage websites without having to write any code.",
       },
       {
         header: "Why",
         path: "why",
         description: [
-          "Hackathon.js is a hackathon platform that allows users to create and manage hackathons. It provides features such as team management, project submission, and judging.",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "I decided to take on this challenge in being able to refine my prompt eneginneering scills and understanding for to build AI workflows in order to create a 1-1 website replica.",
+          "With the help of Gemini Flash 2.5, I was able to create a platform that allows users to easily create and manage websites without having to write any code. The platform is designed to be user-friendly and intuitive, allowing users to focus on creating content rather than worrying about the technical details.",
         ],
         image: CitrusHack,
       },
@@ -322,7 +369,7 @@ export const PROJECTS: Projectprops[] = [
       "Next.js",
       "Tailwind CSS",
       "FastAPI",
-      "Neon",
+      "Neon (PostgreSQL",
       "Gemini Flash 2.5",
     ],
     link: [
@@ -354,14 +401,13 @@ export const PROJECTS: Projectprops[] = [
         header: "About",
         path: "about",
         description:
-          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqua.",
+          "With this being my first hackathon win, the idea behind this project is simple: you copy the article or excerpt you want to check for bias and sentiment, then easily observe the app’s results by scrolling down.",
       },
       {
         header: "Why",
         path: "why",
         description: [
-          "Hackathon.js is a hackathon platform that allows users to create and manage hackathons. It provides features such as team management, project submission, and judging.",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "To fit with the theme of Roshack and its tracks, we wanted to explore how athletes and celebrities are asked very different questions. Female athletes are often asked more about their clothes and fashion choices, while men are typically asked about their skills. This made us think about the ways women are still discriminated against today. Although the issue started with visual and audio media, as we dug deeper, we found the written medium to be even more interesting.",
         ],
         image: CitrusHack,
       },
@@ -444,20 +490,24 @@ export const PROJECTS: Projectprops[] = [
         header: "About",
         path: "about",
         description:
-          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqua.",
+          "This project was built for my Database Management Systems (CS166) class, where I designed a game rental system that allows users to rent games. The goal was to deepen my understanding of databases using SQL queries and go beyond the main assignment, which was a Java terminal application, by also creating a frontend with Next.js and Tailwind CSS.",
       },
       {
         header: "Why",
         path: "why",
         description: [
-          "Hackathon.js is a hackathon platform that allows users to create and manage hackathons. It provides features such as team management, project submission, and judging.",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "I wanted to challenge myself by extending the project requirements and applying what I learned to a real-world use case. By creating a web frontend, I could explore the full stack—connecting the database to a modern interface and making the application more user-friendly. This project helped me bridge the gap between backend database management and frontend development, giving me practical experience in both areas.",
         ],
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Java", "PostgreSQL"],
+    techstack: ["Next.js", "Tailwind CSS", "Java", "PostgreSQL", "Redux"],
     link: [
+      {
+        name: "Github",
+        link: "https://github.com/",
+        icon: Github,
+      },
       {
         name: "Github",
         link: "https://github.com/",
@@ -467,11 +517,6 @@ export const PROJECTS: Projectprops[] = [
         name: "Website",
         link: "https://github.com/",
         icon: link,
-      },
-      {
-        name: "Figma",
-        link: "https://github.com/",
-        icon: Figma,
       },
     ],
     slug: "game-rental-system",
