@@ -18,30 +18,31 @@ import rtools from "@/public/projects/rtools.png";
 import Figma from "@/public/icons/figma.svg";
 import Github from "@/public/icons/github.svg";
 import link from "@/public/icons/link.svg";
+import qlip from "@/public/projects/qlip.png";
 
 export const PROJECTS: Projectprops[] = [
   {
     name: "Qlip 60",
     short_desc:
-      "A personal link manager to save, organize, and track links for later use",
+      "An AI-driven content generation platform for short-form educational videos",
     authors: ["Jonathan Trujillo"],
     description: [
       {
         header: "About",
         path: "about",
         description:
-          "This project was designed to refine my skills in database management systems, specifically using PostgreSQL, while building a full-stack web application with Next.js and Tailwind CSS. The goal was to create a personal link manager that allows users to save, organize, and track links for later use. I also used this project as a way to experiment with writing optimized SQL queries and explore scalable database design patterns that could support growth beyond a simple MVP",
+          "This is a project built with Next.js (TypeScript) on the frontend and Flask on the backend, using Neon as the database. I integrated Gemini 2.5 to power a multi-stage, AI-driven content generation workflow. The goal was to produce short-form educational videos tailored for Gen Z audiences with shorter attention spans, drawing inspiration from the Reddit story + Subway Surfers-style TikTok format. Qlip reimagines viral storytelling trends into engaging, bite-sized learning experiences.",
       },
-      {
-        header: "Why",
-        path: "why",
-        description: [
-          "I built this app for personal use because I often used Discord as a dumping ground for links, and over time, it became difficult to search for older resources.",
-          "Hold solves this by providing a dedicated, lightweight space where I can quickly save links, group them into folders, and track views over time. It offers a simple, fast, and organized way to manage saved links, whether they're articles I want to read later, tools I want to revisit, or resources I frequently reference.",
-        ],
-        image: holddahboard,
-        // image: CitrusHack,
-      },
+      // {
+      //   header: "Why",
+      //   path: "why",
+      //   description: [
+      //     "I built this app for personal use because I often used Discord as a dumping ground for links, and over time, it became difficult to search for older resources.",
+      //     "Hold solves this by providing a dedicated, lightweight space where I can quickly save links, group them into folders, and track views over time. It offers a simple, fast, and organized way to manage saved links, whether they're articles I want to read later, tools I want to revisit, or resources I frequently reference.",
+      //   ],
+      //   image: holddahboard,
+      //   // image: CitrusHack,
+      // },
     ],
     techstack: [
       "Next.js",
@@ -64,12 +65,12 @@ export const PROJECTS: Projectprops[] = [
       },
       {
         name: "Website",
-        link: "https://qlip-pi.vercel.app",
+        link: "https://qlip-tau.vercel.app",
         icon: link,
       },
     ],
     slug: "qlip",
-    image: hold,
+    image: qlip,
   },
   {
     name: "Hold",
@@ -191,14 +192,14 @@ export const PROJECTS: Projectprops[] = [
         header: "About",
         path: "about",
         description:
-          "A major issue with today’s advancing technologies is that they mostly benefit consumer products or companies with big budgets and dedicated teams. But we wanted to build for the underdogs: nonprofits that often lack the time, staff, or resources to run full-scale marketing operations. These organizations are usually run by just a few passionate people serving their communities without expecting profit.",
+          " AI-powered marketing platform from the ground up, a low-cost solution leveraging affordable LLMs. It served as a lightweight CRM for nonprofits and underrepresented groups, automating outreach, streamlining workflows, and significantly reducing manual effort. We developed it with React/Next.js, Typescript, Tailwind, shadcn, Redis, Firebase, React Query, and Google Gemini 2.5 Pro.",
       },
       {
         header: "Why",
         path: "why",
         description: [
-          "Hackathon.js is a hackathon platform that allows users to create and manage hackathons. It provides features such as team management, project submission, and judging.",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "A major issue with today’s advancing technologies is that they mostly benefit consumer products or companies with big budgets and dedicated teams. But we wanted to build for the underdogs: nonprofits that often lack the time, staff, or resources to run full-scale marketing operations. These organizations are usually run by just a few passionate people serving their communities without expecting profit.",
+          "it made advanced tools accessible to organizations that usually can’t afford consumer-focused CRM platforms. Nonprofits often struggle to balance day-to-day operations with the demands of outreach, and this tool helped bridge that gap in a meaningful, cost-effective way.",
         ],
         image: CitrusHack,
       },
@@ -491,9 +492,9 @@ export const PROJECTS: Projectprops[] = [
     image: galpress,
   },
   {
-    name: "CutieHack",
-    short_desc: "Cutiehack Hackathon website",
-    authors: ["Jonathan Trujillo", "Taaha Sayed", "Amir Shanti", "Brandon Sun"],
+    name: "URL Shortener",
+    short_desc: "Custom URL shortener for UCR hackathons",
+    authors: ["Jonathan Trujillo"],
     description: [
       {
         header: "About",
@@ -511,7 +512,15 @@ export const PROJECTS: Projectprops[] = [
         image: CitrusHack,
       },
     ],
-    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    techstack: [
+      "Go",
+      "Sqlite",
+      "Next.js",
+      "Tailwind CSS",
+      "shadcn",
+      "Better Auth",
+      "React Query",
+    ],
     link: [
       {
         name: "Github",
@@ -523,13 +532,8 @@ export const PROJECTS: Projectprops[] = [
         link: "https://github.com/",
         icon: link,
       },
-      {
-        name: "Figma",
-        link: "https://github.com/",
-        icon: Figma,
-      },
     ],
-    slug: "cutiehack",
+    slug: "url-shortener",
     image: cutiehack,
   },
   {
@@ -572,6 +576,48 @@ export const PROJECTS: Projectprops[] = [
     ],
     slug: "game-rental-system",
     image: cs166,
+  },
+  {
+    name: "CutieHack",
+    short_desc: "Cutiehack Hackathon website",
+    authors: ["Jonathan Trujillo", "Taaha Sayed", "Amir Shanti", "Brandon Sun"],
+    description: [
+      {
+        header: "About",
+        path: "about",
+        description:
+          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqua.",
+      },
+      {
+        header: "Why",
+        path: "why",
+        description: [
+          "Hackathon.js is a hackathon platform that allows users to create and manage hackathons. It provides features such as team management, project submission, and judging.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        ],
+        image: CitrusHack,
+      },
+    ],
+    techstack: ["Next.js", "Tailwind CSS", "Flask", "Gemini Flash 2.5"],
+    link: [
+      {
+        name: "Github",
+        link: "https://github.com/",
+        icon: Github,
+      },
+      {
+        name: "Website",
+        link: "https://github.com/",
+        icon: link,
+      },
+      {
+        name: "Figma",
+        link: "https://github.com/",
+        icon: Figma,
+      },
+    ],
+    slug: "cutiehack",
+    image: cutiehack,
   },
   {
     name: "CitrusHack 2025",
