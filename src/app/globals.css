@@ -2,6 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+.vintage-shadow-blue {
+  @apply font-bold text-5xl md:text-7xl relative;
+  color: #3ccde3;
+  letter-spacing: 0.05em;
+  text-shadow:
+    2px 2px 0 #21798e,
+    4px 4px 0 #187886,
+    6px 6px 0 #0a566b;
+}
+
+.vintage-shadow {
+  @apply font-bold text-5xl md:text-7xl text-[#F5D6B4] relative;
+  letter-spacing: 0.05em;
+  text-shadow:
+    2px 2px 0 #822a19,
+    4px 4px 0 #822a19,
+    6px 6px 0 #822a19,
+    8px 8px 0 #000,
+    10px 10px 10px #0006;
+}
+.text-outline-white {
+  color: transparent;
+  letter-spacing: 0.05em;
+  text-shadow:
+    2px 2px 0 #000000,
+    4px 4px 0 #9a9a9a,
+    6px 6px 0 #585858,
+    8px 8px 0 #000,
+    10px 10px 10px #0006;
+  -webkit-text-stroke: 2px #fff;
+  text-stroke: 2px #fff; /* For Firefox */
+}
+.text-outline-white2 {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #fff;
+  text-stroke: 1.5px #fff;
+}
+
 @layer utilities {
   .text-outline-white {
     -webkit-text-stroke-width: 1px;

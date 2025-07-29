@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Projectprops } from "@/types";
 import Link from "next/link";
 import { Link as Scroll } from "react-scroll";
+import { ArrowLeft, ExternalLink, Calendar, User } from "lucide-react";
 
 const Project = ({
   name,
@@ -14,107 +15,237 @@ const Project = ({
   authors = ["Jonathan Trujilo"],
 }: Projectprops) => {
   return (
-    <div className="relative flex flex-col justify-center items-center text-white">
-      {/* <Link href={"/projects"} className="text-3xl bg-jt-lightblue text-white font-semibold p-1 rounded-xl">Return to Projects</Link> */}
-      <div className="bg-gradient-to-r from-[#3CCDE3]/40 to-[#0B00A4]/40 blur-3xl w-1/2 h-3/5 absolute top-[10%] -left-[10%] -z-10" />
-      <div className="bg-gradient-to-r from-[#3CCDE3]/40 to-[#0B00A4]/40 blur-3xl w-1/3 h-3/5 absolute -bottom-[5%] right-[0%] -z-10" />
-      <div className="relative w-full h-80">
-        <Image
-          src={image}
-          alt="project hero"
-          fill
-          className="object-cover z-0"
+    <div
+      className="min-h-screen relative overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #0f172a 50%, #1e293b 75%, #0f172a 100%)",
+      }}
+    >
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-60 right-20 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-300" />
+        <div className="absolute bottom-32 left-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-700" />
+
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: "50px 50px",
+          }}
         />
-        <div className="absolute inset-0 bg-black/20 z-10" />
       </div>
-      <div className="w-11/12 md:w-2/3 space-y-6 mt-5">
-        <div className="flex w-full justify-between">
-          <div className="flex flex-col items-start justify-center">
-            <div className="text-jt-lightblue font-semibold">
-              Oct 2024 - Mar 2025
-            </div>
-            <h1 className="text-5xl font-bold">{name}</h1>
-            <div className="flex items-center space-x-1 ml-0">
-              <span className="text-gray-300 font-medium">by</span>
-              {authors.map((author, index) => (
-                <span key={index} className="text-gray-300 font-medium">
-                  {author}
-                  {index < authors.length - 1 && ", "}
-                </span>
-              ))}
-            </div>
-            <div className="flex gap-3 flex-wrap justify-center mt-2">
-              {techstack.map((tech, index) => (
-                <div
-                  key={index}
-                  className="text-gray-300 font-medium text-sm bg-gray-700 rounded-full px-2 py-1"
-                >
-                  {tech}
+
+      <div className="relative z-10">
+        <div className="container mx-auto px-8 py-6">
+          <Link
+            href="/projects"
+            className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors group"
+          >
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+            <span className="font-mono text-sm">cd ../projects</span>
+          </Link>
+        </div>
+
+        <div className="container mx-auto px-8 mb-12">
+          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-slate-900/90 via-slate-800/90 to-slate-900/90 backdrop-blur-md border border-slate-700/50 shadow-2xl">
+            <div className="relative h-80 overflow-hidden">
+              <Image src={image} alt={name} fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse shadow-lg" />
+                  <span className="text-white font-mono text-sm uppercase tracking-wider bg-emerald-500/90 px-3 py-1 rounded-full backdrop-blur-sm border border-emerald-400/50 shadow-lg">
+                    Production Ready
+                  </span>
                 </div>
-              ))}
-            </div>
-            {link && (
-              <div className="flex gap-3 mt-4">
-                {link.map(({ name, link, icon }, index) => (
-                  <Link
-                    key={index}
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 border border-white text-base text-white font-light rounded-lg px-2 py-1"
-                  >
-                    <Image src={icon} alt="icon" /> {name}
-                  </Link>
-                ))}
+                <h1 className="text-5xl font-bold text-white mb-2">{name}</h1>
+                <div className="flex items-center gap-4 text-slate-300">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4" />
+                    <span className="font-mono text-sm">
+                      Oct 2024 - Mar 2025
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <User className="w-4 h-4" />
+                    <span className="font-mono text-sm">
+                      {authors.join(", ")}
+                    </span>
+                  </div>
+                </div>
               </div>
-            )}
-          </div>
-          <div className="flex flex-col items-start border-l-4 border-jt-lightblue pl-4 h-fit -ml-4">
-            {description.map(({ header, path }, index) => (
-              <Scroll
-                key={index}
-                to={path}
-                smooth={true}
-                duration={800}
-                offset={0}
-                spy={true}
-                className="text-xl font-medium cursor-pointer text-white hover:text-jt-lightblue transition-colors duration-300"
-              >
-                {header}
-              </Scroll>
-            ))}
+            </div>
           </div>
         </div>
-        {description.map(({ header, description, image, path }, index) => (
-          <div key={index} className="flex flex-col gap-4">
-            <div className="border-l-4 border-jt-lightblue pl-4">
-              <h2 id={path} className="text-xl font-bold">
-                {header}
-              </h2>
-            </div>
-            {image ? (
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="md:w-1/2 space-y-4">
-                  <p className="text-gray-300 leading-relaxed">
-                    {description[0]}
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    {description[1]}
-                  </p>
+
+        <div className="container mx-auto px-8">
+          <div className="grid lg:grid-cols-4 gap-8">
+            <div className="lg:col-span-1">
+              <div className="sticky top-8 space-y-6">
+                <div className="bg-slate-900/90 backdrop-blur-md border border-slate-700/50 rounded-2xl p-6">
+                  <h3 className="text-cyan-400 font-mono text-sm uppercase tracking-wider mb-4">
+                    Tech Stack
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {techstack.map((tech, index) => (
+                      <span
+                        key={index}
+                        className="text-xs font-mono bg-slate-800/50 text-slate-300 px-3 py-1 rounded-full border border-slate-700/30"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <div className="md:w-1/2 bg-gray-800 rounded-lg aspect-video flex items-center justify-center">
-                  <Image
-                    src={image}
-                    alt="image"
-                    className="w-full h-full object-cover rounded-lg"
-                  />
+
+                {link && (
+                  <div className="bg-slate-900/90 backdrop-blur-md border border-slate-700/50 rounded-2xl p-6">
+                    <h3 className="text-cyan-400 font-mono text-sm uppercase tracking-wider mb-4">
+                      External Links
+                    </h3>
+                    <div className="space-y-3">
+                      {link.map(({ name, link: url, icon }, index) => (
+                        <Link
+                          key={index}
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-3 p-3 rounded-xl bg-slate-800/30 hover:bg-slate-800/50 border border-slate-700/30 hover:border-cyan-400/30 transition-all group"
+                        >
+                          <div className="w-5 h-5 flex-shrink-0">
+                            <Image
+                              src={icon}
+                              alt={name}
+                              width={20}
+                              height={20}
+                            />
+                          </div>
+                          <span className="text-slate-300 group-hover:text-cyan-300 transition-colors text-sm">
+                            {name}
+                          </span>
+                          <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 ml-auto transition-colors" />
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                <div className="bg-slate-900/90 backdrop-blur-md border border-slate-700/50 rounded-2xl p-6">
+                  <div className="text-cyan-400 font-mono text-sm uppercase tracking-wider mb-4">
+                    Quick Navigation
+                  </div>
+                  <div className="space-y-2">
+                    {description.map(({ header, path }, index) => (
+                      <Scroll
+                        key={index}
+                        to={path}
+                        smooth={true}
+                        duration={800}
+                        offset={-100}
+                        spy={true}
+                        className="block p-2 rounded-lg text-sm text-slate-300 hover:text-cyan-300 hover:bg-slate-800/30 transition-all cursor-pointer border-l-2 border-transparent hover:border-cyan-400"
+                      >
+                        {header}
+                      </Scroll>
+                    ))}
+                  </div>
                 </div>
               </div>
-            ) : (
-              <p className="text-gray-300 leading-relaxed">{description}</p>
-            )}
+            </div>
+
+            <div className="lg:col-span-3">
+              <div className="space-y-8">
+                {description.map(
+                  (
+                    { header, description: desc, image: sectionImage, path },
+                    index,
+                  ) => (
+                    <div
+                      key={index}
+                      id={path}
+                      className="bg-slate-900/90 backdrop-blur-md border border-slate-700/50 rounded-2xl p-8 scroll-mt-24"
+                    >
+                      <div className="flex items-center gap-4 mb-6">
+                        <div className="w-1 h-8 bg-gradient-to-b from-cyan-400 to-blue-400 rounded-full" />
+                        <div>
+                          <h2 className="text-2xl font-bold text-white">
+                            {header}
+                          </h2>
+                          <div className="text-cyan-400/60 font-mono text-xs mt-1">
+                            ./{path.replace("#", "")}
+                          </div>
+                        </div>
+                      </div>
+
+                      {sectionImage ? (
+                        <div className="grid md:grid-cols-2 gap-8">
+                          <div className="space-y-4">
+                            {Array.isArray(desc) ? (
+                              desc.map((paragraph, i) => (
+                                <p
+                                  key={i}
+                                  className="text-slate-300 leading-relaxed"
+                                >
+                                  {paragraph}
+                                </p>
+                              ))
+                            ) : (
+                              <p className="text-slate-300 leading-relaxed">
+                                {desc}
+                              </p>
+                            )}
+                          </div>
+                          <div className="relative rounded-xl overflow-hidden bg-slate-800/50 border border-slate-700/30">
+                            <Image
+                              src={sectionImage}
+                              alt={header}
+                              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity" />
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="prose prose-invert max-w-none">
+                          {Array.isArray(desc) ? (
+                            desc.map((paragraph, i) => (
+                              <p
+                                key={i}
+                                className="text-slate-300 leading-relaxed mb-4"
+                              >
+                                {paragraph}
+                              </p>
+                            ))
+                          ) : (
+                            <p className="text-slate-300 leading-relaxed">
+                              {desc}
+                            </p>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  ),
+                )}
+              </div>
+            </div>
           </div>
-        ))}
+        </div>
+
+        <div className="container mx-auto px-8 py-12 mt-16">
+          <div className="text-center">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-mono text-sm"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Back to Projects
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

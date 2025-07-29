@@ -21,6 +21,57 @@ import link from "@/public/icons/link.svg";
 
 export const PROJECTS: Projectprops[] = [
   {
+    name: "Qlip 60",
+    short_desc:
+      "A personal link manager to save, organize, and track links for later use",
+    authors: ["Jonathan Trujillo"],
+    description: [
+      {
+        header: "About",
+        path: "about",
+        description:
+          "This project was designed to refine my skills in database management systems, specifically using PostgreSQL, while building a full-stack web application with Next.js and Tailwind CSS. The goal was to create a personal link manager that allows users to save, organize, and track links for later use. I also used this project as a way to experiment with writing optimized SQL queries and explore scalable database design patterns that could support growth beyond a simple MVP",
+      },
+      {
+        header: "Why",
+        path: "why",
+        description: [
+          "I built this app for personal use because I often used Discord as a dumping ground for links, and over time, it became difficult to search for older resources.",
+          "Hold solves this by providing a dedicated, lightweight space where I can quickly save links, group them into folders, and track views over time. It offers a simple, fast, and organized way to manage saved links, whether they're articles I want to read later, tools I want to revisit, or resources I frequently reference.",
+        ],
+        image: holddahboard,
+        // image: CitrusHack,
+      },
+    ],
+    techstack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Neon (PostgreSQL",
+      "Drizzle ORM",
+      "Better Auth",
+      "React Query",
+      "AWS S3",
+      "AWS Cloudfront",
+      "Flask",
+      "ElevenLabs",
+      "Gemini 2.5 Pro",
+    ],
+    link: [
+      {
+        name: "Github",
+        link: "https://github.com/quick-60",
+        icon: Github,
+      },
+      {
+        name: "Website",
+        link: "https://qlip-pi.vercel.app",
+        icon: link,
+      },
+    ],
+    slug: "qlip",
+    image: hold,
+  },
+  {
     name: "Hold",
     short_desc:
       "A personal link manager to save, organize, and track links for later use",

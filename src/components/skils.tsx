@@ -3,17 +3,18 @@ import React from "react";
 
 const Skills = () => {
   return (
-    <div className="text-black h-full">
-      <h2 className="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200 text-white">
-        Skills
-      </h2>
+    <div className="relative bg-white/5 border border-jt-lightblue rounded-2xl p-8 hover:border-cyan-500/80 transition-all duration-300">
+      <div className="flex items-center gap-3 mb-6">
+        <div className="w-2 h-2 bg-jt-lightblue rounded-full" />
+        <div className="text-xl font-bold text-white font-mono">~/skills</div>
+      </div>
 
-      <div className="space-y-8">
+      <div className="space-y-4">
         {Object.entries(SKILLS).map(([type, skills], index) => (
           <div key={index}>
-            <h3 className="text-xl font-medium text-jt-lightblue mb-4">
-              {type}
-            </h3>
+            <div className="text-lg font-semibold text-white mb-2 font-mono flex items-center gap-2">
+              <span className="text-cyan-400">$</span> {type.toLowerCase()}
+            </div>
             <div className="flex flex-wrap gap-3">
               {skills.map(({ name, icon: Icon }, idx) => (
                 <div

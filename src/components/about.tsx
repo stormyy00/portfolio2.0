@@ -1,29 +1,31 @@
-import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowUpRight, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import Skills from "./skils";
 import { CREDENTIALS } from "@/data/skills";
+import Header from "./header";
 
 const About = () => {
   return (
     <div id="about" className="py-16 text-white w-ful relative">
       <div className="bg-gradient-to-r from-[#3CCDE3]/40 to-[#0B00A4]/40 blur-3xl w-1/3 h-4/5 absolute -top-[0%] right-0 -z-10" />
       {/* <div className="bg-gradient-to-r from-[#3CCDE3]/40 to-[#0B00A4]/40 blur-3xl w-1/3 h-3/5 absolute -top-[0%] left-4 -z-10 overflow-clip" /> */}
-      <div className="flex flex-col items-start mb-6">
+      {/* <div className="flex flex-col items-start mb-6">
         <div className="text-2xl text-left text-jt-lightblue mx-4 my-1">
           About
         </div>
         <div className="text-white text-left text-5xl font-medium mx-4">
           About
         </div>
-      </div>
-
+      </div> */}
+      <Header title="about" />
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6">
         <div className="space-y-8">
-          <div>
-            <h2 className="text-2xl font-semibold mb-4 pb-2 border-b border-gray-200">
-              About me
-            </h2>
+          <div className="relative bg-white/5 border border-jt-lightblue rounded-2xl p-8 hover:border-cyan-500/80 transition-all duration-300">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-2 h-2 bg-jt-lightblue rounded-full"></div>
+              <div className="text-xl font-bold text-white font-mono">~/me</div>
+            </div>
             <p className="text-lg leading-relaxed">
               I am currently a software engineer at{" "}
               <span className="text-jt-lightblue font-semibold">EFG</span>,
@@ -41,53 +43,33 @@ const About = () => {
             </p>
           </div>
 
-          <div>
-            <h2 className="text-2xl font-semibold mb-4 pb-2 border-b border-gray-200">
-              Credentials
-            </h2>
+          <div className="relative bg-white/5 border border-jt-lightblue rounded-2xl p-8 hover:border-cyan-500/80 transition-all duration-300">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-2 h-2 bg-jt-lightblue rounded-full"></div>
+              <div className="text-xl font-bold text-white font-mono">
+                ~/credentials
+              </div>
+            </div>
             <div className="flex flex-wrap gap-3 mt-4">
               {CREDENTIALS.map(({ name, link }, index) => (
                 <Link
                   href={link}
                   target="_blank"
                   key={index}
-                  className="flex items-center gap-2 px-3 py-2 bg-white/10 border border-white/50 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md hover:border-jt-lightblue/40 transition duration-200"
+                  className="flex items-center gap-2 px-3 py-2 bg-white/5 border border-white/50 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md hover:border-jt-lightblue/40 transition duration-200"
                 >
-                  <span>{name}</span>
-                  <ArrowUpRight />
+                  <div className="flex items-center gap-3">
+                    <ChevronRight
+                      size={16}
+                      className="text-cyan-400 group-hover/item:translate-x-1 transition-transform"
+                    />
+                    <span className="text-slate-200 font-mono text-sm">
+                      {name}
+                    </span>
+                  </div>
+                  <ArrowUpRight className="w-4 h-4 text-cyan-400 opacity-0 group-hover/item:opacity-100 transition-opacity" />
                 </Link>
               ))}
-            </div>
-          </div>
-
-          <div>
-            <h2 className="text-2xl font-semibold mb-4 pb-2 border-b border-gray-200">
-              Connect
-            </h2>
-            <div className="flex gap-4 mt-4">
-              <Link
-                href="https://www.linkedin.com/in/jonathan--trujillo/"
-                target="_blank"
-                className="p-3 bg-gray-500 hover:bg-blue-100 hover:text-blue-600 rounded-full transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={24} />
-              </Link>
-              <Link
-                href="https://github.com/jonathantrujillo"
-                target="_blank"
-                className="p-3 bg-gray-500 hover:bg-gray-700 hover:text-white rounded-full transition-colors"
-                aria-label="GitHub"
-              >
-                <Github size={24} />
-              </Link>
-              <Link
-                href="mailto:youremail@example.com"
-                className="p-3 bg-gray-500 hover:bg-red-100 hover:text-red-600 rounded-full transition-colors"
-                aria-label="Email"
-              >
-                <Mail size={24} />
-              </Link>
             </div>
           </div>
         </div>
