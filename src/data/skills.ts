@@ -3,6 +3,7 @@ import {
   SiCentos,
   SiCplusplus,
   SiCypress,
+  SiDocker,
   SiDrizzle,
   SiExpo,
   SiExpress,
@@ -22,6 +23,7 @@ import {
   SiReact,
   SiRedis,
   SiRescript,
+  SiShadcnui,
   SiSupabase,
   SiTailwindcss,
   SiTypescript,
@@ -85,15 +87,23 @@ export const SKILLS = {
       icon: SiTailwindcss,
     },
     {
+      name: "shadcn",
+      icon: SiShadcnui,
+    },
+    {
       name: "Google Cloud Plaform",
       icon: SiGoogle,
+    },
+    {
+      name: "Docker",
+      icon: SiDocker,
     },
     {
       name: "Flask",
       icon: SiFlask,
     },
     {
-      name: "Express",
+      name: "Express.js",
       icon: SiExpress,
     },
     {

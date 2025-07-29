@@ -19,7 +19,7 @@ const Experiences = ({ data }: props) => {
     <div className="flex h-full w-11/12 flex-wrap justify-center items-center md:w-10/12 py-10">
       <div className="flex w-screen flex-col md:flex-row">
         <motion.div
-          className="flex flex-col w-full md:w-1/3 pr-4 border-r border-gray-600 flex-shrink-0"
+          className="flex flex-col  w-full md:w-1/3  pr-2 md:pr-4 border-r border-gray-600 flex-shrink-0"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}

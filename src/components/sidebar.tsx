@@ -14,7 +14,7 @@ const Sidebar = () => {
   return (
     <>
       <motion.div
-        className="left-4 top-1/2 z-[1000] hidden -translate-y-1/2 flex-col items-center justify-center gap-y-3 rounded-xl bg-jt-lightblue/80 p-3 font-medium text-white shadow-lg backdrop-blur-sm transition-all duration-300 ease-in-out md:fixed md:flex"
+        className="left-4 top-1/2 z-[1000] hidden -translate-y-1/2 flex-col items-center justify-center gap-y-3 rounded-xl bg-jt-lightblue/80  p-3 font-medium text-white shadow-lg backdrop-blur-sm transition-all duration-300 ease-in-out md:fixed md:flex"
         animate={{ width: isOpen ? "180px" : "65px" }}
         initial={{ width: "65px" }}
         onMouseEnter={() => setIsOpen(true)}

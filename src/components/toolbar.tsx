@@ -24,7 +24,7 @@ const Toolbar = ({ data, setSearch }: props) => {
           );
         }}
         placeholder="Search Projects"
-        className="w-full px-5 py-1 bg-white/10 text-white border border-white/20 rounded-md placeholder-white/60 backdrop-blur-md focus:outline-none focus:ring-1 focus:ring-jt-lightblue focus:border-jt-lightblue transition"
+        className="w-full px-2 py-1 text-xs font-mono bg-transparent text-white border border-white/20 rounded-md placeholder-white/60  focus:outline-none focus:ring-1 focus:ring-jt-lightblue focus:border-jt-lightblue transition"
       />
     </div>
   );
