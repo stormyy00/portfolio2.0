@@ -1,7 +1,7 @@
 "use client";
 
 import { NAVIGATION } from "@/data/navigation";
-import { FileText, Github, Linkedin, Mail } from "lucide-react";
+import { FileText, Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { Link as Scroll } from "react-scroll";
@@ -87,14 +87,13 @@ const Home = () => {
             Apex
           </p>
         </div>
-        <div className="group cursor-pointer">
-          <div className="p-3 bg-gradient-to-br from-cyan-400/20 via-blue-500/20 to-indigo-600/20 backdrop-blur-md border border-cyan-400/30 rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-105 group-hover:shadow-cyan-400/20 transition-all duration-300">
+        <LinkIcons
+          name={"Blogs"}
+          icon={
             <FileText className="w-8 h-8 text-cyan-300 group-hover:text-cyan-200 transition-colors" />
-          </div>
-          <p className="mt-2 text-xs font-mono text-cyan-200 text-center tracking-tighter  uppercase drop-shadow">
-            Blogs
-          </p>
-        </div>
+          }
+          url="/blogs"
+        />
       </div>
 
       <div className="absolute right-10 top-10">
@@ -119,13 +118,13 @@ const Home = () => {
             }
             url={"https://github.com/stormyy00"}
           />
-          <LinkIcons
+          {/* <LinkIcons
             name={"Mail"}
             icon={
               <Mail className="w-8 h-8 text-cyan-400 group-hover/social:text-red-400 transition-colors" />
             }
             url={"mailto:youremail@example.com"}
-          />
+          /> */}
         </div>
       </div>
       <div className="relative w-fit text-5xl md:text-7xl text-center font-bold text-jt-lightblue">
