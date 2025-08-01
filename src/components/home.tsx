@@ -1,7 +1,8 @@
 "use client";
 
 import { NAVIGATION } from "@/data/navigation";
-import { FileText, Github, Linkedin } from "lucide-react";
+import { SiGithub } from "@icons-pack/react-simple-icons";
+import { FileText, Linkedin } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { Link as Scroll } from "react-scroll";
@@ -114,7 +115,7 @@ const Home = () => {
           <LinkIcons
             name={"Github"}
             icon={
-              <Github className="w-8 h-8 text-cyan-300 group-hover:text-cyan-200 transition-colorss" />
+              <SiGithub className="w-8 h-8 text-cyan-300 group-hover:text-cyan-200 transition-colorss" />
             }
             url={"https://github.com/stormyy00"}
           />
