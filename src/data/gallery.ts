@@ -12,11 +12,27 @@ import beach from "@/public/photography/landscapes/beach.webp";
 import flower from "@/public/photography/landscapes/flowers.webp";
 import sign from "@/public/photography/vision/sign.webp";
 import cart from "@/public/photography/vision/cart.webp";
+import glacier from "@/public/photography/landscapes/glacier.jpg";
+import food from "@/public/photography/vision/food.jpg";
+import glass from "@/public/photography/vision/glass.jpg";
+import newspaper from "@/public/photography/vision/newspaper.jpg";
 
 export const GALLERY = [
   {
     name: "My Vision",
-    image: [theo, enter, heart, plants, purple, wall, sign, cart],
+    image: [
+      theo,
+      enter,
+      heart,
+      glass,
+      plants,
+      newspaper,
+      purple,
+      food,
+      wall,
+      sign,
+      cart,
+    ],
     link: "me",
     type: "landscape",
   },
@@ -34,7 +50,7 @@ export const GALLERY = [
   },
   {
     name: "Landscapes",
-    image: [flower, beach],
+    image: [flower, beach, glacier],
     link: "landscapes",
     type: "landscape",
   },
