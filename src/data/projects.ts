@@ -19,6 +19,8 @@ import Figma from "@/public/icons/figma.svg";
 import Github from "@/public/icons/github.svg";
 import link from "@/public/icons/link.svg";
 import qlip from "@/public/projects/qlip.png";
+import url from "@/public/projects/url.png";
+import urlshortener from "@/public/projects/url-dashboard.png";
 
 export const PROJECTS: Projectprops[] = [
   {
@@ -106,7 +108,7 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/hold",
+        link: "https://github.com/stormyy00/hold",
         icon: Github,
       },
       {
@@ -160,18 +162,13 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/stormyy00/github-pr-automation",
         icon: Github,
       },
       {
         name: "Website",
         link: "https://github.com/",
         icon: link,
-      },
-      {
-        name: "Figma",
-        link: "https://github.com/",
-        icon: Figma,
       },
     ],
     slug: "github-ai-agent",
@@ -217,17 +214,17 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/seanquiambao/TTickle-Automation",
         icon: Github,
       },
       {
         name: "Website",
-        link: "https://github.com/",
+        link: "https://blue-heart-automation.vercel.app/",
         icon: link,
       },
       {
         name: "Figma",
-        link: "https://github.com/",
+        link: "https://www.figma.com/design/d6akvc0ygwyNQvTiE8CaNM/TTicklesPlatform?node-id=0-1&t=fZVzSu8HwkEphyAN-1",
         icon: Figma,
       },
     ],
@@ -274,18 +271,8 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/acm-ucr/aurora",
         icon: Github,
-      },
-      {
-        name: "Website",
-        link: "https://github.com/",
-        icon: link,
-      },
-      {
-        name: "Figma",
-        link: "https://github.com/",
-        icon: Figma,
       },
     ],
     slug: "aurora",
@@ -322,17 +309,17 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/acm-ucr/CSE-AI-resources",
         icon: Github,
       },
       {
         name: "Website",
-        link: "https://github.com/",
+        link: "https://learnai.cs.ucr.edu",
         icon: link,
       },
       {
         name: "Figma",
-        link: "https://github.com/",
+        link: "https://www.figma.com/design/qdagE2pkGk4J7vyuHdVHcx/CSE-AI-WEBSITE?node-id=0-1&p=f&t=D1zYyVOe02EqIt82-0",
         icon: Figma,
       },
     ],
@@ -379,18 +366,13 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/stormyy00/email-automation",
         icon: Github,
       },
       {
         name: "Website",
-        link: "https://github.com/",
+        link: "https://autoauto.vercel.app",
         icon: link,
-      },
-      {
-        name: "Figma",
-        link: "https://github.com/",
-        icon: Figma,
       },
     ],
     slug: "auto-auto",
@@ -429,11 +411,6 @@ export const PROJECTS: Projectprops[] = [
         name: "Github",
         link: "https://github.com/stormyy00/nuvio",
         icon: Github,
-      },
-      {
-        name: "Website",
-        link: "https://github.com/",
-        icon: link,
       },
     ],
     slug: "nuvio",
@@ -474,18 +451,13 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/rfairooz/GalsPress",
         icon: Github,
       },
       {
         name: "Website",
-        link: "https://github.com/",
+        link: "https://gal-press-test2.vercel.app",
         icon: link,
-      },
-      {
-        name: "Figma",
-        link: "https://github.com/",
-        icon: Figma,
       },
     ],
     slug: "gals-press",
@@ -509,7 +481,7 @@ export const PROJECTS: Projectprops[] = [
           "Hackathon.js is a hackathon platform that allows users to create and manage hackathons. It provides features such as team management, project submission, and judging.",
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         ],
-        image: CitrusHack,
+        image: urlshortener,
       },
     ],
     techstack: [
@@ -524,17 +496,17 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/stormyy00/ac-shorter",
         icon: Github,
       },
       {
         name: "Website",
-        link: "https://github.com/",
+        link: "https://ac-shorter.vercel.app/",
         icon: link,
       },
     ],
     slug: "url-shortener",
-    image: cutiehack,
+    image: url,
   },
   {
     name: "Game Rental System",
@@ -560,17 +532,17 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/stormyy00/cs166",
         icon: Github,
       },
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/stormyy00/cs166-frontend",
         icon: Github,
       },
       {
         name: "Website",
-        link: "https://github.com/",
+        link: "https://cs166-frontend.vercel.app",
         icon: link,
       },
     ],
@@ -602,12 +574,12 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/cutiehack-ucr/cutie-hack-2024",
         icon: Github,
       },
       {
         name: "Website",
-        link: "https://github.com/",
+        link: "https://cutiehack.com",
         icon: link,
       },
       {
@@ -644,12 +616,12 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/stormyy00/citrushack2025",
         icon: Github,
       },
       {
         name: "Website",
-        link: "https://github.com/",
+        link: "https://www.citrushack.com",
         icon: link,
       },
       {
@@ -686,18 +658,8 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/stormyy00/rosehack-2025",
         icon: Github,
-      },
-      {
-        name: "Website",
-        link: "https://github.com/",
-        icon: link,
-      },
-      {
-        name: "Figma",
-        link: "https://github.com/",
-        icon: Figma,
       },
     ],
     slug: "rosehack-2025",
@@ -729,18 +691,8 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/stormyy00/HackTech2024",
         icon: Github,
-      },
-      {
-        name: "Website",
-        link: "https://github.com/",
-        icon: link,
-      },
-      {
-        name: "Figma",
-        link: "https://github.com/",
-        icon: Figma,
       },
     ],
     slug: "mood-real",
@@ -771,17 +723,17 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/acm-ucr/pad-website",
         icon: Github,
       },
       {
         name: "Website",
-        link: "https://github.com/",
+        link: "https://pad.ucrhighlanders.org",
         icon: link,
       },
       {
         name: "Figma",
-        link: "https://github.com/",
+        link: "https://www.figma.com/design/6FTXStJnmz3ltBSM1OtgAE/Phi-Alpha-Delta-Pre-Law-Fraternity",
         icon: Figma,
       },
     ],
@@ -813,17 +765,17 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/acm-ucr/hiss-website",
         icon: Github,
       },
       {
         name: "Website",
-        link: "https://github.com/",
+        link: "https://hiss.ucrhighlanders.org",
         icon: link,
       },
       {
         name: "Figma",
-        link: "https://github.com/",
+        link: "https://www.figma.com/file/Rk8S9muvP1HL4PkVHU25gj/HISS?type=design&node-id=0-1&mode=design&t=BQDMzYmOcO0oUDKh-0",
         icon: Figma,
       },
     ],
@@ -856,17 +808,17 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/acm-ucr/r-tools",
         icon: Github,
       },
       {
         name: "Website",
-        link: "https://github.com/",
+        link: "https://rtools.ucrhighlanders.org",
         icon: link,
       },
       {
         name: "Figma",
-        link: "https://github.com/",
+        link: "https://www.figma.com/file/srPYl8FCyMLXr4fMQic28X/R'Tools?type=design&node-id=0%3A1&mode=design&t=UcB5WmSDilkrVkbF-1",
         icon: Figma,
       },
     ],
@@ -898,21 +850,21 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/acm-ucr/ais-website",
         icon: Github,
       },
       {
         name: "Website",
-        link: "https://github.com/",
+        link: "https://ais.ucrhighlanders.org/",
         icon: link,
       },
       {
         name: "Figma",
-        link: "https://github.com/",
+        link: "https://www.figma.com/design/Bhz6C7rBlK55l0ycqDLi1Z/AIS-website?node-id=0-1&t=zm25Ga7vGzINJxfc-0",
         icon: Figma,
       },
     ],
-    slug: "mood-real",
+    slug: "ais",
     image: rosehack,
   },
   {
@@ -941,18 +893,8 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/stormyy00/PC-Cooling-System",
         icon: Github,
-      },
-      {
-        name: "Website",
-        link: "https://github.com/",
-        icon: link,
-      },
-      {
-        name: "Figma",
-        link: "https://github.com/",
-        icon: Figma,
       },
     ],
     slug: "cooling-system",
@@ -983,7 +925,7 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/stormyy00/http-server",
         icon: Github,
       },
     ],
@@ -1015,17 +957,17 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/acm-ucr/art-factory-website",
         icon: Github,
       },
       {
         name: "Website",
-        link: "https://github.com/",
+        link: "https://artfactory.ucrhighlanders.org",
         icon: link,
       },
       {
         name: "Figma",
-        link: "https://github.com/",
+        link: "figma.com/file/29dhv08rdERrP0fE02gktk/art-factory-website?type=design&node-id=0-1&mode=design&t=6nDsu19vLc6AP9tf-0",
         icon: Figma,
       },
     ],
@@ -1057,13 +999,8 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/stormyy00/airbnb-analysis",
         icon: Github,
-      },
-      {
-        name: "Website",
-        link: "https://github.com/",
-        icon: link,
       },
     ],
     slug: "airbnb-analysis",
@@ -1094,18 +1031,8 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/stormyy00/BobaThoughts",
         icon: Github,
-      },
-      {
-        name: "Website",
-        link: "https://github.com/",
-        icon: link,
-      },
-      {
-        name: "Figma",
-        link: "https://github.com/",
-        icon: Figma,
       },
     ],
     slug: "mood-real",
@@ -1136,18 +1063,8 @@ export const PROJECTS: Projectprops[] = [
     link: [
       {
         name: "Github",
-        link: "https://github.com/",
+        link: "https://github.com/stormyy00/planner",
         icon: Github,
-      },
-      {
-        name: "Website",
-        link: "https://github.com/",
-        icon: link,
-      },
-      {
-        name: "Figma",
-        link: "https://github.com/",
-        icon: Figma,
       },
     ],
     slug: "planner",
