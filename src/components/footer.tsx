@@ -5,9 +5,9 @@ import { GithubIcon, Linkedin, Mail } from "lucide-react";
 const Footer = () => {
   const quickLinks = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/projects", label: "Projects" },
-    { href: "/experience", label: "Experience" },
+    { href: "#about", label: "About" },
+    { href: "#projects", label: "Projects" },
+    { href: "#experience", label: "Experience" },
   ];
 
   const resources = [
