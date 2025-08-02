@@ -121,60 +121,6 @@ export const PROJECTS: Projectprops[] = [
     image: hold,
   },
   {
-    name: "GitHub AI Agent",
-    short_desc:
-      "Built an to automatically review, merge, & modify code, cutting manual review for developers",
-    authors: ["Jonathan Trujillo"],
-    description: [
-      {
-        header: "About",
-        path: "about",
-        description:
-          "This project was created to explore building a self-sufficient AI agent capable of acting like a software engineer. Inspired by Jerry Li, who led efforts in developing a SWE AI agent, I decided to prototype a smaller-scale version by automating GitHub pull requests and integrating the agent into existing CI/CD pipelines.",
-      },
-      {
-        header: "Why",
-        path: "why",
-        description: [
-          "As software teams grow and engineering workflows become more complex, automating repetitive tasks like code reviews, PR checks, and formatting can significantly increase developer productivity and reduce bottlenecks.",
-          "This project addresses the need for intelligent automation in modern development pipelines. By integrating an AI agent into GitHub and CI/CD workflows, I aimed to demonstrate how such agents can accelerate code review processes, enforce consistent coding standards, and reduce manual overhead",
-        ],
-        image: CitrusHack,
-      },
-      {
-        header: "How it works",
-        path: "how",
-        description: [
-          "The system includes a REST API integrated with the GitHub API, configured to listen for pull request events on specified repositories. When a pull request is opened, the AI agent automatically reviews the changes, generates a summary of what the PR entails, and sends a notification to either Slack or Discord based on the user's preferred platform.",
-          " After notifying the user, the agent attempts to intelligently validate the changes and, if all checks pass, proceeds to merge the PR into the `dev` branch: streamlining the review and deployment pipeline.",
-        ],
-        // image: CitrusHack,
-      },
-    ],
-    techstack: [
-      "Next.js",
-      "Tailwind CSS",
-      "Flask",
-      "Gemini Flash 2.5",
-      "Supabase",
-      "Redis",
-    ],
-    link: [
-      {
-        name: "Github",
-        link: "https://github.com/stormyy00/github-pr-automation",
-        icon: Github,
-      },
-      {
-        name: "Website",
-        link: "https://github.com/",
-        icon: link,
-      },
-    ],
-    slug: "github-ai-agent",
-    image: CitrusHack,
-  },
-  {
     name: "Ttickle Platform",
     short_desc:
       "AI Marketing Platform for social amplification for underrepresented communities",
@@ -230,6 +176,60 @@ export const PROJECTS: Projectprops[] = [
     ],
     slug: "ttickle-platform",
     image: cs178,
+  },
+  {
+    name: "GitHub AI Agent",
+    short_desc:
+      "Built an to automatically review, merge, & modify code, cutting manual review for developers",
+    authors: ["Jonathan Trujillo"],
+    description: [
+      {
+        header: "About",
+        path: "about",
+        description:
+          "This project was created to explore building a self-sufficient AI agent capable of acting like a software engineer. Inspired by Jerry Li, who led efforts in developing a SWE AI agent, I decided to prototype a smaller-scale version by automating GitHub pull requests and integrating the agent into existing CI/CD pipelines.",
+      },
+      {
+        header: "Why",
+        path: "why",
+        description: [
+          "As software teams grow and engineering workflows become more complex, automating repetitive tasks like code reviews, PR checks, and formatting can significantly increase developer productivity and reduce bottlenecks.",
+          "This project addresses the need for intelligent automation in modern development pipelines. By integrating an AI agent into GitHub and CI/CD workflows, I aimed to demonstrate how such agents can accelerate code review processes, enforce consistent coding standards, and reduce manual overhead",
+        ],
+        image: CitrusHack,
+      },
+      {
+        header: "How it works",
+        path: "how",
+        description: [
+          "The system includes a REST API integrated with the GitHub API, configured to listen for pull request events on specified repositories. When a pull request is opened, the AI agent automatically reviews the changes, generates a summary of what the PR entails, and sends a notification to either Slack or Discord based on the user's preferred platform.",
+          " After notifying the user, the agent attempts to intelligently validate the changes and, if all checks pass, proceeds to merge the PR into the `dev` branch: streamlining the review and deployment pipeline.",
+        ],
+        // image: CitrusHack,
+      },
+    ],
+    techstack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Flask",
+      "Gemini Flash 2.5",
+      "Supabase",
+      "Redis",
+    ],
+    link: [
+      {
+        name: "Github",
+        link: "https://github.com/stormyy00/github-pr-automation",
+        icon: Github,
+      },
+      {
+        name: "Website",
+        link: "https://github.com/",
+        icon: link,
+      },
+    ],
+    slug: "github-ai-agent",
+    image: CitrusHack,
   },
   {
     name: "Aurora",
@@ -327,96 +327,6 @@ export const PROJECTS: Projectprops[] = [
     image: learnai,
   },
   {
-    name: "Auto Auto",
-    short_desc: "Email automation platform for organizations and companies",
-    authors: ["Jonathan Trujillo", "Taaha Sayed"],
-    description: [
-      {
-        header: "About",
-        path: "about",
-        description:
-          "Auto Auto was created overnight in my bedroom with Taaha Sayed, a fellow enthusiast. Our goal was to build a platform that simplifies and automates repetitive email tasks while providing visibility and organization-level insights — perfect for clubs, hackathons, and growing teams.",
-      },
-      {
-        header: "Why",
-        path: "why",
-        description: [
-          "When I stepped up as Director of CitrusHack, I quickly noticed how outdated and inefficient our outreach process was. We relied on spreadsheets of names and emails combined with a static email template to contact judges, chaperones, catering teams, and sponsors. The process was tedious and error-prone, making it clear that a better solution was needed.",
-          "To streamline this, I built a simple email automation tool that allowed users to configure a subject line and body template, then import a list of recipients by name and email. Taaha and I expanded this concept into a full-fledged platform featuring user authentication, organizational and group support, and a shared email activity log for better collaboration and transparency.",
-        ],
-        image: CitrusHack,
-      },
-      {
-        header: "Features",
-        path: "features",
-        description: [
-          "Manual outreach is time-consuming and inefficient — especially for events and organizations managing hundreds of contacts. Auto Auto was designed to eliminate that overhead.",
-          "Users can create personalized email campaigns in minutes, manage shared templates across their organization, and track sent history to ensure accountability and coordination across teams.",
-        ],
-      },
-    ],
-    techstack: [
-      "Next.js",
-      "Tailwind CSS",
-      "Supabase",
-      "Redis",
-      "Nodemailer",
-      "Express",
-    ],
-    link: [
-      {
-        name: "Github",
-        link: "https://github.com/stormyy00/email-automation",
-        icon: Github,
-      },
-      {
-        name: "Website",
-        link: "https://autoauto.vercel.app",
-        icon: link,
-      },
-    ],
-    slug: "auto-auto",
-    image: autoauto,
-  },
-  {
-    name: "Nuvio",
-    short_desc: "Website cloning builder",
-    authors: ["Jonathan Trujillo"],
-    description: [
-      {
-        header: "About",
-        path: "about",
-        description:
-          "This was originally a coding assgment for Orchid YCW25, where I had to build a website cloning builder that allows users to clone websites and edit them. The goal was to create a platform that allows users to easily create and manage websites without having to write any code.",
-      },
-      {
-        header: "Why",
-        path: "why",
-        description: [
-          "I decided to take on this challenge in being able to refine my prompt eneginneering scills and understanding for to build AI workflows in order to create a 1-1 website replica.",
-          "With the help of Gemini Flash 2.5, I was able to create a platform that allows users to easily create and manage websites without having to write any code. The platform is designed to be user-friendly and intuitive, allowing users to focus on creating content rather than worrying about the technical details.",
-        ],
-        image: CitrusHack,
-      },
-    ],
-    techstack: [
-      "Next.js",
-      "Tailwind CSS",
-      "FastAPI",
-      "Neon (PostgreSQL",
-      "Gemini Flash 2.5",
-    ],
-    link: [
-      {
-        name: "Github",
-        link: "https://github.com/stormyy00/nuvio",
-        icon: Github,
-      },
-    ],
-    slug: "nuvio",
-    image: CitrusHack,
-  },
-  {
     name: "GalsPress",
     short_desc: "Analytics platform for detemining the bias of a news article",
     authors: [
@@ -465,7 +375,7 @@ export const PROJECTS: Projectprops[] = [
   },
   {
     name: "URL Shortener",
-    short_desc: "Custom URL shortener for UCR hackathons",
+    short_desc: "URL shortener utilizing Go & Next.js with JWT authorization",
     authors: ["Jonathan Trujillo"],
     description: [
       {
@@ -584,12 +494,102 @@ export const PROJECTS: Projectprops[] = [
       },
       {
         name: "Figma",
-        link: "https://github.com/",
+        link: "https://www.figma.com/design/AQJtvVtBpkMsmkwsNGujRs/UI-UX-Design",
         icon: Figma,
       },
     ],
     slug: "cutiehack",
     image: cutiehack,
+  },
+  {
+    name: "Auto Auto",
+    short_desc: "Email automation platform for organizations and companies",
+    authors: ["Jonathan Trujillo", "Taaha Sayed"],
+    description: [
+      {
+        header: "About",
+        path: "about",
+        description:
+          "Auto Auto was created overnight in my bedroom with Taaha Sayed, a fellow enthusiast. Our goal was to build a platform that simplifies and automates repetitive email tasks while providing visibility and organization-level insights — perfect for clubs, hackathons, and growing teams.",
+      },
+      {
+        header: "Why",
+        path: "why",
+        description: [
+          "When I stepped up as Director of CitrusHack, I quickly noticed how outdated and inefficient our outreach process was. We relied on spreadsheets of names and emails combined with a static email template to contact judges, chaperones, catering teams, and sponsors. The process was tedious and error-prone, making it clear that a better solution was needed.",
+          "To streamline this, I built a simple email automation tool that allowed users to configure a subject line and body template, then import a list of recipients by name and email. Taaha and I expanded this concept into a full-fledged platform featuring user authentication, organizational and group support, and a shared email activity log for better collaboration and transparency.",
+        ],
+        image: CitrusHack,
+      },
+      {
+        header: "Features",
+        path: "features",
+        description: [
+          "Manual outreach is time-consuming and inefficient — especially for events and organizations managing hundreds of contacts. Auto Auto was designed to eliminate that overhead.",
+          "Users can create personalized email campaigns in minutes, manage shared templates across their organization, and track sent history to ensure accountability and coordination across teams.",
+        ],
+      },
+    ],
+    techstack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Supabase",
+      "Redis",
+      "Nodemailer",
+      "Express",
+    ],
+    link: [
+      {
+        name: "Github",
+        link: "https://github.com/stormyy00/email-automation",
+        icon: Github,
+      },
+      {
+        name: "Website",
+        link: "https://autoauto.vercel.app",
+        icon: link,
+      },
+    ],
+    slug: "auto-auto",
+    image: autoauto,
+  },
+  {
+    name: "Nuvio",
+    short_desc: "Website cloning builder",
+    authors: ["Jonathan Trujillo"],
+    description: [
+      {
+        header: "About",
+        path: "about",
+        description:
+          "This was originally a coding assgment for Orchid YCW25, where I had to build a website cloning builder that allows users to clone websites and edit them. The goal was to create a platform that allows users to easily create and manage websites without having to write any code.",
+      },
+      {
+        header: "Why",
+        path: "why",
+        description: [
+          "I decided to take on this challenge in being able to refine my prompt eneginneering scills and understanding for to build AI workflows in order to create a 1-1 website replica.",
+          "With the help of Gemini Flash 2.5, I was able to create a platform that allows users to easily create and manage websites without having to write any code. The platform is designed to be user-friendly and intuitive, allowing users to focus on creating content rather than worrying about the technical details.",
+        ],
+        image: CitrusHack,
+      },
+    ],
+    techstack: [
+      "Next.js",
+      "Tailwind CSS",
+      "FastAPI",
+      "Neon (PostgreSQL",
+      "Gemini Flash 2.5",
+    ],
+    link: [
+      {
+        name: "Github",
+        link: "https://github.com/stormyy00/nuvio",
+        icon: Github,
+      },
+    ],
+    slug: "nuvio",
+    image: CitrusHack,
   },
   {
     name: "CitrusHack 2025",
@@ -626,7 +626,7 @@ export const PROJECTS: Projectprops[] = [
       },
       {
         name: "Figma",
-        link: "https://github.com/",
+        link: "https://www.figma.com/design/cWlwDqsYNHsI4Ew96zGBdO/Citrus-Hack--Website-Design--2024-25-",
         icon: Figma,
       },
     ],

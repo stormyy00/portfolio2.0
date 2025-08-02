@@ -2,6 +2,7 @@ import React from "react";
 import Card from "./card";
 import { Projectprops } from "@/types";
 import Header from "./header";
+import Link from "next/link";
 
 const Projects = ({
   data,
@@ -37,6 +38,14 @@ const Projects = ({
               />
             </div>
           ))}
+        <div className="w-full flex justify-center mt-2">
+          <Link
+            href={"/projects"}
+            className="text-jt-lightblue hover:text-cyan-300 transition-colors font-mono text-sm uppercase tracking-wider"
+          >
+            View More
+          </Link>
+        </div>
       </div>
     </div>
   );
