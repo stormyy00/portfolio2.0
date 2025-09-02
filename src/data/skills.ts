@@ -11,18 +11,22 @@ import {
   SiFirebase,
   SiFlask,
   SiFramer,
+  SiGo,
   SiGoogle,
+  SiGrafana,
   SiJavascript,
+  SiJest,
   SiKubernetes,
   SiLinux,
   SiMysql,
   SiNextdotjs,
+  SiOpentelemetry,
   SiPostgresql,
   SiPostman,
+  SiPrometheus,
   SiPython,
   SiReact,
   SiRedis,
-  SiRescript,
   SiShadcnui,
   SiSupabase,
   SiTailwindcss,
@@ -47,6 +51,10 @@ export const SKILLS = {
     {
       name: "PostgreSQL",
       icon: SiPostgresql,
+    },
+    {
+      name: "Golang",
+      icon: SiGo,
     },
     {
       name: "mySQL",
@@ -91,7 +99,7 @@ export const SKILLS = {
       icon: SiShadcnui,
     },
     {
-      name: "Google Cloud Plaform",
+      name: "GCP",
       icon: SiGoogle,
     },
     {
@@ -123,6 +131,10 @@ export const SKILLS = {
       icon: SiCypress,
     },
     {
+      name: "Jest",
+      icon: SiJest,
+    },
+    {
       name: "Postman",
       icon: SiPostman,
     },
@@ -130,8 +142,30 @@ export const SKILLS = {
     { name: "Linux", icon: SiLinux },
     { name: "Centos", icon: SiCentos },
     { name: "VMWare", icon: SiVmware },
-    { name: "Scripting", icon: SiRescript },
+    { name: "Grafana", icon: SiGrafana },
+    { name: "Prometheus", icon: SiPrometheus },
+    { name: "OpenTelemetry", icon: SiOpentelemetry },
   ],
+  // "AI/ML": [
+  //   {
+  //     name: "PyTorch",
+  //     icon: SiPython,
+  //   },
+  //   {
+  //     name: "scikit-learn",
+  //     icon: SiPython,
+  //   },
+  //   {
+  //     name: "Pandas",
+  //     icon: SiPython,
+  //   },
+  //   {
+  //     name: "NumPy",
+  //     icon: SiPython,
+  //   },
+  //   { name: "Prompt Engineering", icon: ScrollIcon },
+  // ],
+  // Cloud: [
   // Design: [{ name: "Figma", icon: SiFigma }],
   // Credentials: [
   //   { name: "Google Cloud Foundations ", icon: SiGoogle },
