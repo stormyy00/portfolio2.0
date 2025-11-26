@@ -15,7 +15,7 @@ export async function generateStaticParams() {
     }));
 }
 
-export default function Page({ params }: { params: { name: string } }) {
+const page = ({ params }: { params: { name: string } }) => {
   const filePath = path.join(process.cwd(), "src/blogs", `${params.name}.mdx`);
 
   if (!fs.existsSync(filePath)) {
@@ -55,4 +55,6 @@ export default function Page({ params }: { params: { name: string } }) {
       </div>
     </div>
   );
-}
+};
+
+export default page;
