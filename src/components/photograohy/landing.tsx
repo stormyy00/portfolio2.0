@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import background from "@/public/landing.jpg";
+import background from "@/public/landing.webp";
 import { Link as Scroll } from "react-scroll";
 
 const Landing = () => {
