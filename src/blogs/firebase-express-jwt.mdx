@@ -1,0 +1,543 @@
+---
+title: "How to Implement JWT Authentication with Firebase in Next.js + Express.js"
+date: "2025-11-25"
+tags: ["nextjs", "express", "firebase", "jwt"]
+---
+
+# How to Implement JWT Authentication with Firebase in Next.js + Express.js
+
+In this guide, you'll set up JWT authentication with Firebase Auth, using Next.js for the frontend and Express for the backend. Firebase will issue ID tokens, and Express will verify them with the Admin SDK before granting access to protected routes.
+
+## What We're Building
+
+- Next.js frontend that signs in users with Firebase Auth.
+- Express.js backend that verifies Firebase ID tokens with the Admin SDK.
+- JWT middleware for protecting and optionally allowing public routes.
+- API client + React hooks to make authenticated requests simple in your app.
+
+We'll build a Next.js frontend that signs users in with Firebase Auth, then call an Express backend that verifies Firebase ID tokens before allowing access to protected routes.
+
+## Prerequisites (and how to fulfill them)
+
+Node.js 18+ (install from nodejs.org)
+Firebase project with Email/Password (or any provider) enabled
+
+How to get Admin credentials (service account):
+Firebase Console → Project Settings → Service accounts → Generate new private key
+
+Save JSON locally; you'll copy `project_id`, `client_email`, and `private_key` into `.env`
+
+## Structure
+
+```
+project-root/
+├── app/
+│   ├── page.tsx
+│   ├── layout.tsx
+│   └── demo/
+│       ├── page.tsx
+│       └── sign-in/page.tsx
+│
+├── utils/
+│   ├── firebase.client.ts
+│   └── actions.ts
+│
+├── server/
+│   ├── src/
+│   │   ├── middleware/
+│   │   │   └── auth.ts
+│   │   ├── util/
+│   │   │   └── firebase-admin.ts
+│   │   └── index.ts
+│   └── tsconfig.json
+│
+├── .env
+├── .env.local
+├── package.json
+└── tsconfig.json
+```
+
+## Step 1: Create and Install Dependencies
+
+Create your Express Server:
+
+```
+npm i -D typescript tsx @types/node @types/express
+npm i express
+```
+
+In your Express server:
+
+```
+npm install firebase-admin cors helmet cookie-parser
+npm install --save-dev @types/cors
+```
+
+Next.js (frontend):
+
+```
+npx create-next-app@latest jwt-auth-demo
+```
+
+## Step 2: Configure Environment Variables
+
+```
+FIREBASE_PROJECT_ID=your-project-id
+FIREBASE_CLIENT_EMAIL=your-client-email
+FIREBASE_PRIVATE_KEY=" - - -BEGIN PRIVATE KEY - - -
+Your-Private-Key
+ - - -END PRIVATE KEY - - -
+"
+PORT=3001
+```
+
+## Step 3: Initialize Firebase Admin (Express Side)
+
+### `server/src/utils/firebase-admin.ts`
+
+```ts
+import { initializeApp, getApps, cert } from "firebase-admin/app";
+import { getAuth } from "firebase-admin/auth";
+import { getFirestore } from "firebase-admin/firestore";
+
+if (!getApps().length) {
+  initializeApp({
+    credential: cert({
+      projectId: process.env.FIREBASE_PROJECT_ID,
+      clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+      privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\n/g, "\n"),
+    }),
+  });
+  console.log("✓ Firebase Admin initialized");
+}
+export const adminAuth = getAuth();
+export const adminDb = getFirestore();
+```
+
+Why? The Admin SDK runs on your server only and lets you verify ID tokens securely. You will get an error if you install the client firebase package.
+
+---
+
+## Step 4: Auth Middleware
+
+What is middleware? In Express, middleware is a function that runs before your route handler. Here we use one to:
+
+- Extract the `Authorization: Bearer <token>` header
+- Verify the token with Firebase Admin
+- Attach the decoded user to `req.user`, then call `next()`
+
+Here's a reusable middleware for protected routes.
+
+### `server/src/middleware/auth.ts`
+
+```ts
+import { Request, Response, NextFunction } from "express";
+import { adminAuth } from "../util/firebase-admin";
+
+export interface AuthenticatedRequest extends Request {
+  user?: {
+    uid: string;
+    email?: string;
+    name?: string;
+    picture?: string;
+    claims?: Record<string, unknown>;
+  };
+}
+
+function extractToken(req: Request): string | null {
+  const authHeader = req.headers.authorization;
+  if (authHeader?.startsWith("Bearer ")) return authHeader.slice(7);
+  return null;
+}
+
+export const authenticate =
+  () =>
+  async (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
+    try {
+      const token = extractToken(req);
+      if (!token)
+        return res.status(401).json({ error: "Access token required" });
+
+      const decoded = await adminAuth.verifyIdToken(token);
+      req.user = {
+        uid: decoded.uid,
+        email: decoded.email,
+        name: decoded.name,
+        picture: decoded.picture,
+      };
+      next();
+    } catch (err) {
+      return res.status(403).json({ error: "Invalid or expired token" });
+    }
+  };
+```
+
+---
+
+## Step 5: Express Server with Protected Routes
+
+We are essentially adding `authenticate()` meaning a function is running before the route handler is accessed.
+
+### `server/src/index.ts`
+
+```ts
+import express, { Express, Request, Response, json } from "express";
+import cors from "cors";
+import helmet from "helmet";
+import cookieParser from "cookie-parser";
+import { authenticate, AuthenticatedRequest } from "./middleware/auth";
+
+const app: Express = express();
+
+app.use(express.json());
+app.use(cookieParser());
+app.use(helmet());
+app.use(
+  cors({
+    origin: "https://localhost:3000",
+    credentials: true,
+  }),
+);
+
+// Public health route
+app.get("/api/health", (_req: Request, res: Response) => {
+  res.json({
+    status: "OK",
+    ts: new Date().toISOString(),
+  });
+});
+
+// Protected route
+app.get(
+  "/api/user/profile",
+  authenticate(),
+  (req: AuthenticatedRequest, res: Response) => {
+    res.json({
+      message: "User profile accessed successfully",
+      user: req.user,
+    });
+  },
+);
+
+app.listen(process.env.PORT || 3001, () =>
+  console.log(`🚀 Server running on :${process.env.PORT || 3001}`),
+);
+```
+
+### API Endpoints
+
+- `GET /api/health` → health check (no auth)
+- `GET /api/user/profile` → requires auth
+
+---
+
+## Step 6: Create your signin/signup Form
+
+### `src/app/signin/page.tsx`
+
+```tsx
+"use client";
+
+import { useState } from "react";
+import { getAuth } from "@/utils/firebase";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+} from "firebase/auth";
+
+const AuthForm = () => {
+  const auth = getAuth();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [mode, setMode] = useState("signin");
+  const [user, setUser] = useState(null);
+  const [error, setError] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError(null);
+
+    try {
+      if (mode === "signup") {
+        const res = await createUserWithEmailAndPassword(auth, email, password);
+        setUser(res.user);
+      } else {
+        const res = await signInWithEmailAndPassword(auth, email, password);
+        setUser(res.user);
+      }
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  const handleSignOut = async () => {
+    await signOut(auth);
+    setUser(null);
+  };
+
+  return (
+    <div className="max-w-sm mx-auto bg-white p-6 rounded shadow space-y-4">
+      <h2 className="text-xl font-bold text-center">
+        {mode === "signin" ? "Sign In" : "Sign Up"}
+      </h2>
+
+      {!user ? (
+        <form onSubmit={handleSubmit} className="space-y-3">
+          <input
+            type="email"
+            placeholder="Email"
+            className="w-full border p-2 rounded"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+
+          <input
+            type="password"
+            placeholder="Password"
+            className="w-full border p-2 rounded"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+
+          <button
+            type="submit"
+            className="w-full py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+          >
+            {mode === "signin" ? "Sign In" : "Sign Up"}
+          </button>
+
+          <button
+            type="button"
+            className="w-full py-2 bg-gray-100 rounded text-sm"
+            onClick={() => setMode(mode === "signin" ? "signup" : "signin")}
+          >
+            {mode === "signin"
+              ? "Need an account? Sign Up"
+              : "Already have an account? Sign In"}
+          </button>
+        </form>
+      ) : (
+        <div className="text-center space-y-3">
+          <p>Signed in as {user.email}</p>
+          <button
+            onClick={handleSignOut}
+            className="w-full py-2 bg-red-500 text-white rounded hover:bg-red-600"
+          >
+            Sign Out
+          </button>
+        </div>
+      )}
+
+      {error && <p className="text-red-600 text-sm">{error}</p>}
+    </div>
+  );
+};
+
+export default AuthForm;
+```
+
+---
+
+## Step 7: Next.js Server API Calls
+
+### `src/app/demo/actions.ts`
+
+```ts
+"use server";
+
+import { getAuth } from "firebase/auth";
+
+const getToken = async () => {
+  const auth = getAuth();
+  const user = auth.currentUser;
+  if (!user) return null;
+  return await user.getIdToken();
+};
+
+export const getHealth = async () => {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/health`);
+  if (!res.ok) throw new Error(`Health check failed: ${res.status}`);
+  return res.json();
+};
+
+export const getUserProfile = async () => {
+  const token = await getToken();
+  if (!token) throw new Error("No user signed in");
+
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/user/profile`,
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    },
+  );
+  if (!res.ok) throw new Error(`Profile request failed: ${res.status}`);
+  return res.json();
+};
+```
+
+---
+
+## Step 8: Next.js Client API Calls
+
+### `src/app/demo/page.tsx`
+
+```tsx
+"use client";
+
+import { useState } from "react";
+import { getHealth, getUserProfile } from "./actions";
+
+const Demo = () => {
+  const [health, setHealth] = useState(null);
+  const [profile, setProfile] = useState(null);
+  const [error, setError] = useState(null);
+
+  const handleHealth = async () => {
+    setError(null);
+    try {
+      const data = await getHealth();
+      setHealth(data);
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  const handleProfile = async () => {
+    setError(null);
+    try {
+      const data = await getUserProfile();
+      setProfile(data);
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-50 p-6">
+      <div className="mx-auto max-w-2xl space-y-6">
+        <h1 className="text-2xl font-bold">API Demo</h1>
+
+        <div className="p-4 bg-white rounded shadow">
+          <div className="text-lg font-semibold mb-2">Health Check</div>
+          <button
+            onClick={handleHealth}
+            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+          >
+            Check Health
+          </button>
+          {health && (
+            <pre className="mt-3 bg-gray-100 p-3 rounded text-sm overflow-x-auto">
+              {health && JSON.stringify(health, null, 2)}
+            </pre>
+          )}
+        </div>
+
+        <div className="p-4 bg-white rounded shadow">
+          <div className="text-lg font-semibold mb-2">User Profile</div>
+          <button
+            onClick={handleProfile}
+            className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
+          >
+            Get Profile
+          </button>
+          {profile && (
+            <pre className="mt-3 bg-gray-100 p-3 rounded text-sm overflow-x-auto">
+              {profile && JSON.stringify(profile, null, 2)}
+            </pre>
+          )}
+        </div>
+
+        {error && (
+          <div className="p-3 bg-red-100 text-red-700 rounded">
+            Error: {error}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Demo;
+```
+
+---
+
+## Running Both Servers
+
+```bash
+# Terminal 1: Express backend
+cd server
+npm run dev
+
+# Terminal 2: Next.js frontend
+npm run dev
+```
+
+---
+
+## Testing the Flow
+
+### Health Check (Public)
+
+Click the Health button. You should see:
+
+```json
+{
+  "data": {
+    "timestamp": "2025-09-23T20:39:19.841Z",
+    "uptime": 147.1287784
+  }
+}
+```
+
+### User Profile (Protected)
+
+Click the Profile button:
+
+```json
+{
+  "user": {
+    "email": "emai@gail.com",
+    "name": "Display Name",
+    "picture": "image_url",
+    "uid": "1234abcdefg"
+  }
+}
+```
+
+---
+
+## Authentication Flow Recap
+
+1. User signs in with Firebase in Next.js.
+2. Firebase issues an ID token.
+3. Next.js attaches the token to API requests.
+4. Express verifies the token with Firebase Admin.
+5. If valid → request proceeds; otherwise → 403 Forbidden.
+
+---
+
+## Troubleshooting
+
+- CORS errors → Make sure Express allows your Next.js domain.
+- Token verification fails → Check Firebase Admin credentials.
+- User not authenticated → Ensure sign-in runs before calling APIs.
+
+## Security Notes
+
+- Tokens are always verified server-side.
+- Firebase automatically refreshes expired tokens.
+- Keep private keys only in server-side environment variables.
+
+## Next Steps
+
+- Role-based access control
+- Refresh token handling
+- Centralized API error handling
+- Deployment with Docker or Vercel/Render
+
+---
