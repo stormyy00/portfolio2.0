@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
-import LOGO from "@/public/J-letter.png";
+import LOGO from "@/public/J-letter.webp";
 
 const Navigation = () => {
   const path = usePathname();
