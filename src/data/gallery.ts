@@ -1,4 +1,4 @@
-import bigbear from "@/public/landing.jpg";
+import bigbear from "@/public/landing.webp";
 import enter from "@/public/photography/vision/enter.webp";
 import heart from "@/public/photography/vision/heart.webp";
 import plants from "@/public/photography/vision/plants.webp";
@@ -12,10 +12,10 @@ import beach from "@/public/photography/landscapes/beach.webp";
 import flower from "@/public/photography/landscapes/flowers.webp";
 import sign from "@/public/photography/vision/sign.webp";
 import cart from "@/public/photography/vision/cart.webp";
-import glacier from "@/public/photography/landscapes/glacier.jpg";
-import food from "@/public/photography/vision/food.jpg";
-import glass from "@/public/photography/vision/glass.jpg";
-import newspaper from "@/public/photography/vision/newspaper.jpg";
+import glacier from "@/public/photography/landscapes/glacier.webp";
+import food from "@/public/photography/vision/food.webp";
+import glass from "@/public/photography/vision/glass.webp";
+import newspaper from "@/public/photography/vision/newspaper.webp";
 
 export const GALLERY = [
   {
